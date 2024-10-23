@@ -1,0 +1,143 @@
+object ProfReport: TProfReport
+  Left = 470
+  Height = 305
+  Top = 178
+  Width = 550
+  ActiveControl = lvReport
+  BorderIcons = [biSystemMenu]
+  Caption = 'Profiler Report'
+  ClientHeight = 305
+  ClientWidth = 550
+  Color = clBtnFace
+  Font.Color = clBlack
+  Icon.Data = {
+    FE0200000000010001002020040000000000E802000016000000280000002000
+    0000400000000100040000000000000200000000000000000000000000000000
+    0000000000000000800000800000008080008000000080008000808000008080
+    8000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF
+    FF00000007777777777777777777777777000000777777777777777777777777
+    77700030000000000000000000000007777703BBBBBBBBBBBBBBBBBBBBBBBB80
+    77773BBBBBBBBBBBBBBBBBBBBBBBBBB807773BBBBBBBBBBBBBBBBBBBBBBBBBBB
+    07773BBBBBBBBBBBB8008BBBBBBBBBBB07703BBBBBBBBBBBB0000BBBBBBBBBB8
+    077003BBBBBBBBBBB0000BBBBBBBBBB0770003BBBBBBBBBBB8008BBBBBBBBB80
+    7700003BBBBBBBBBBBBBBBBBBBBBBB077000003BBBBBBBBBBB0BBBBBBBBBB807
+    70000003BBBBBBBBB808BBBBBBBBB07700000003BBBBBBBBB303BBBBBBBB8077
+    000000003BBBBBBBB000BBBBBBBB0770000000003BBBBBBB80008BBBBBB80770
+    0000000003BBBBBB30003BBBBBB077000000000003BBBBBB00000BBBBB807700
+    00000000003BBBBB00000BBBBB07700000000000003BBBBB00000BBBB8077000
+    000000000003BBBB00000BBBB0770000000000000003BBBB00000BBB80770000
+    0000000000003BBB80008BBB077000000000000000003BBBBBBBBBB807700000
+    00000000000003BBBBBBBBB07700000000000000000003BBBBBBBB8077000000
+    000000000000003BBBBBBB0770000000000000000000003BBBBBB80770000000
+    0000000000000003BBBBB077000000000000000000000003BBBB807000000000
+    00000000000000003BB800000000000000000000000000000333000000000000
+    0000F8000003F0000001C0000000800000000000000000000000000000010000
+    00018000000380000003C0000007C0000007E000000FE000000FF000001FF000
+    001FF800003FF800003FFC00007FFC00007FFE0000FFFE0000FFFF0001FFFF00
+    01FFFF8003FFFF8003FFFFC007FFFFC007FFFFE00FFFFFE01FFFFFF07FFFFFF8
+    FFFF
+  }
+  OnShow = FormShow
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '2.1.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 37
+    Top = 268
+    Width = 550
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 37
+    ClientWidth = 550
+    TabOrder = 0
+    object SaveBtn: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Left = 6
+      Height = 25
+      Hint = 'Save report to a file (compatible with Excel)'
+      Top = 6
+      Width = 75
+      BorderSpacing.Around = 6
+      Caption = '&Save...'
+      OnClick = SaveBtnClick
+      TabOrder = 0
+    end
+    object TrimBtn: TButton
+      AnchorSideLeft.Control = SaveBtn
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      Left = 87
+      Height = 25
+      Hint = 'Remove unused calls from the list'
+      Top = 6
+      Width = 75
+      BorderSpacing.Around = 6
+      Caption = '&Trim'
+      OnClick = TrimBtnClick
+      TabOrder = 1
+    end
+    object OKBtn: TButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 469
+      Height = 25
+      Hint = 'Close report window'
+      Top = 6
+      Width = 75
+      Anchors = [akTop, akRight]
+      BorderSpacing.Around = 6
+      Cancel = True
+      Caption = '&Close'
+      Default = True
+      ModalResult = 1
+      OnClick = OKBtnClick
+      TabOrder = 2
+    end
+  end
+  object lvReport: TListView
+    Left = 0
+    Height = 268
+    Hint = 'Click the top column to sort the items'
+    Top = 0
+    Width = 550
+    Align = alClient
+    BorderStyle = bsNone
+    Columns = <    
+      item
+        Caption = 'Function / Procedure '
+        Width = 160
+      end    
+      item
+        Alignment = taRightJustify
+        Caption = 'Total time (ms)'
+        Width = 100
+      end    
+      item
+        Alignment = taRightJustify
+        Caption = 'Calls'
+      end    
+      item
+        Alignment = taRightJustify
+        Caption = 'Average time (ms)'
+        Width = 120
+      end    
+      item
+        Alignment = taRightJustify
+        Caption = 'Percent (%)'
+        Width = 90
+      end>
+    GridLines = True
+    MultiSelect = True
+    RowSelect = True
+    TabOrder = 1
+    ViewStyle = vsReport
+    OnColumnClick = lvReportColumnClick
+  end
+end

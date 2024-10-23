@@ -1,0 +1,673 @@
+object JvThumbnailChildForm: TJvThumbnailChildForm
+  Left = 367
+  Height = 600
+  Top = 149
+  Width = 845
+  Caption = 'JvThumbNail Demo'
+  ClientHeight = 600
+  ClientWidth = 845
+  Color = clBtnFace
+  Font.Color = clWindowText
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.9.0.0'
+  object Splitter2: TSplitter
+    Left = 238
+    Height = 600
+    Top = 0
+    Width = 3
+  end
+  object Panel6: TPanel
+    Left = 0
+    Height = 600
+    Top = 0
+    Width = 238
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 600
+    ClientWidth = 238
+    TabOrder = 0
+    object Splitter4: TSplitter
+      Cursor = crVSplit
+      Left = 0
+      Height = 3
+      Top = 149
+      Width = 238
+      Align = alTop
+      ResizeAnchor = akTop
+    end
+    object ShellTreeView: TShellTreeView
+      Left = 4
+      Height = 145
+      Top = 4
+      Width = 230
+      Align = alTop
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 4
+      BackgroundColor = clDefault
+      Color = clDefault
+      FileSortType = fstAlphabet
+      HideSelection = False
+      Images = DataModule1.ImageList1
+      ReadOnly = True
+      TabOrder = 0
+      OnGetImageIndex = ShellTreeViewGetImageIndex
+      OnGetSelectedIndex = ShellTreeViewGetSelectedIndex
+      Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+      ObjectTypes = [otFolders]
+      ShellListView = ShellListView
+    end
+    object ShellListView: TShellListView
+      Left = 4
+      Height = 191
+      Top = 175
+      Width = 230
+      Align = alClient
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 4
+      Color = clDefault
+      HideSelection = False
+      Mask = '*.ico;*.bmp;*.jpg;*.jpeg;*.png'
+      ReadOnly = True
+      SortType = stText
+      TabOrder = 1
+      OnChange = ShellListViewChange
+      ObjectTypes = [otNonFolders]
+      ShellTreeView = ShellTreeView
+    end
+    object Panel8: TPanel
+      Left = 0
+      Height = 234
+      Top = 366
+      Width = 238
+      Align = alBottom
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 234
+      ClientWidth = 238
+      TabOrder = 2
+      OnResize = Panel8Resize
+      object LblRed: TLabel
+        Left = 4
+        Height = 15
+        Top = 4
+        Width = 230
+        Align = alTop
+        Alignment = taCenter
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        Caption = 'RED'
+        Color = clRed
+        Font.Color = clWhite
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object LblGreen: TLabel
+        Left = 4
+        Height = 15
+        Top = 54
+        Width = 230
+        Align = alTop
+        Alignment = taCenter
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        Caption = 'GREEN'
+        Color = clLime
+        Font.Color = clBlack
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object LblBlue: TLabel
+        Left = 4
+        Height = 15
+        Top = 105
+        Width = 230
+        Align = alTop
+        Alignment = taCenter
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        Caption = 'BLUE'
+        Color = clBlue
+        Font.Color = clWhite
+        ParentColor = False
+        ParentFont = False
+        Transparent = False
+      end
+      object LblContrast: TLabel
+        AnchorSideLeft.Control = ContrastBar
+        AnchorSideTop.Control = BlueBar
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CenterBevel
+        Left = 4
+        Height = 15
+        Top = 156
+        Width = 107
+        Alignment = taCenter
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 4
+        Caption = 'CONTRAST'
+        ParentColor = False
+      end
+      object LblLightness: TLabel
+        AnchorSideLeft.Control = LightnessBar
+        AnchorSideTop.Control = LblContrast
+        AnchorSideRight.Control = LightnessBar
+        AnchorSideRight.Side = asrBottom
+        Left = 127
+        Height = 15
+        Top = 156
+        Width = 98
+        Alignment = taCenter
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Right = 9
+        Caption = 'LIGHTNESS'
+        ParentColor = False
+      end
+      object REDBar: TTrackBar
+        Left = 4
+        Height = 29
+        Top = 21
+        Width = 230
+        Frequency = 51
+        Max = 255
+        Min = -255
+        PageSize = 20
+        Position = 0
+        TickStyle = tsNone
+        Align = alTop
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 4
+        TabOrder = 0
+      end
+      object GreenBar: TTrackBar
+        Left = 4
+        Height = 30
+        Top = 71
+        Width = 230
+        Frequency = 51
+        Max = 255
+        Min = -255
+        PageSize = 20
+        Position = 0
+        TickStyle = tsNone
+        Align = alTop
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 4
+        TabOrder = 1
+      end
+      object BlueBar: TTrackBar
+        Left = 4
+        Height = 30
+        Top = 122
+        Width = 230
+        Frequency = 51
+        Max = 255
+        Min = -255
+        PageSize = 20
+        Position = 0
+        TickStyle = tsNone
+        Align = alTop
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 4
+        TabOrder = 2
+      end
+      object ContrastBar: TTrackBar
+        AnchorSideLeft.Control = Panel8
+        AnchorSideTop.Control = LblContrast
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CenterBevel
+        Left = 4
+        Height = 30
+        Top = 173
+        Width = 107
+        Frequency = 51
+        Max = 100
+        Min = -100
+        PageSize = 20
+        Position = 0
+        TickStyle = tsNone
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 2
+        TabOrder = 3
+      end
+      object BtnApply: TButton
+        AnchorSideLeft.Control = Panel8
+        AnchorSideTop.Control = ContrastBar
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = CenterBevel
+        Left = 4
+        Height = 25
+        Top = 205
+        Width = 107
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 2
+        BorderSpacing.Bottom = 4
+        Caption = 'APPLY'
+        OnClick = BtnApplyClick
+        TabOrder = 4
+      end
+      object LightnessBar: TTrackBar
+        AnchorSideLeft.Control = CenterBevel
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = ContrastBar
+        AnchorSideRight.Control = Panel8
+        AnchorSideRight.Side = asrBottom
+        Left = 127
+        Height = 30
+        Top = 175
+        Width = 107
+        Frequency = 51
+        Max = 100
+        Min = -100
+        PageSize = 20
+        Position = 0
+        TickStyle = tsNone
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 4
+        TabOrder = 5
+      end
+      object CenterBevel: TBevel
+        AnchorSideLeft.Control = Panel8
+        AnchorSideLeft.Side = asrCenter
+        Left = 111
+        Height = 196
+        Top = 0
+        Width = 16
+        Shape = bsSpacer
+      end
+      object BtnSave: TButton
+        AnchorSideLeft.Control = CenterBevel
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = BtnApply
+        AnchorSideRight.Control = Panel8
+        AnchorSideRight.Side = asrBottom
+        Left = 127
+        Height = 25
+        Top = 205
+        Width = 107
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Right = 4
+        Caption = 'SAVE'
+        OnClick = BtnSaveClick
+        TabOrder = 6
+      end
+    end
+    object Panel10: TPanel
+      Left = 4
+      Height = 23
+      Top = 152
+      Width = 230
+      Align = alTop
+      AutoSize = True
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 4
+      BevelOuter = bvNone
+      Caption = 'Panel10'
+      ClientHeight = 23
+      ClientWidth = 230
+      TabOrder = 3
+      OnResize = Panel10Resize
+      object FilterComboBox: TFilterComboBox
+        AnchorSideLeft.Control = Panel10
+        AnchorSideRight.Control = Panel10
+        AnchorSideRight.Side = asrBottom
+        Left = 0
+        Height = 23
+        Top = 0
+        Width = 230
+        Anchors = [akTop, akLeft, akRight]
+        Filter = 'All Known Formats|*.ico;*.bmp;*.jpg;*.jpeg;*.png|All Files (*.*)|*.*|JPEG Files|*.jpg;*.jpeg;|BMP Files|*.bmp|PNG Files|*.png|ICONS|*.ico'
+        ItemIndex = 0
+        ShellListView = ShellListView
+        TabOrder = 0
+      end
+    end
+  end
+  object Panel7: TPanel
+    Left = 241
+    Height = 600
+    Top = 0
+    Width = 604
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 600
+    ClientWidth = 604
+    TabOrder = 1
+    object Panel5: TPanel
+      Left = 4
+      Height = 175
+      Top = 4
+      Width = 596
+      Align = alTop
+      AutoSize = True
+      BorderSpacing.Around = 4
+      BevelOuter = bvNone
+      ClientHeight = 175
+      ClientWidth = 596
+      TabOrder = 0
+      object GbThumbImage: TGroupBox
+        AnchorSideLeft.Control = Panel1
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = Panel5
+        AnchorSideRight.Side = asrBottom
+        Left = 431
+        Height = 117
+        Top = 0
+        Width = 131
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Left = 8
+        Caption = 'THUMBIMAGE'
+        ClientHeight = 97
+        ClientWidth = 127
+        TabOrder = 0
+        object BtnInvert: TButton
+          AnchorSideLeft.Control = GbThumbImage
+          AnchorSideTop.Control = GbThumbImage
+          AnchorSideRight.Control = GbThumbImage
+          AnchorSideRight.Side = asrBottom
+          Left = 8
+          Height = 25
+          Top = 0
+          Width = 111
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = True
+          BorderSpacing.Left = 8
+          BorderSpacing.Right = 8
+          Caption = 'INVERT'
+          OnClick = BtnInvertClick
+          TabOrder = 0
+        end
+        object BtnGrayScale: TButton
+          AnchorSideLeft.Control = BtnInvert
+          AnchorSideTop.Control = BtnInvert
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = BtnInvert
+          AnchorSideRight.Side = asrBottom
+          Left = 8
+          Height = 25
+          Top = 29
+          Width = 111
+          Anchors = [akTop, akLeft, akRight]
+          AutoSize = True
+          BorderSpacing.Top = 4
+          BorderSpacing.Bottom = 8
+          Caption = 'GRAYSCALE'
+          OnClick = BtnGrayScaleClick
+          TabOrder = 1
+        end
+        object CbTransform: TComboBox
+          AnchorSideLeft.Control = BtnInvert
+          AnchorSideTop.Control = BtnGrayScale
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = BtnInvert
+          AnchorSideRight.Side = asrBottom
+          Left = 8
+          Height = 23
+          Top = 62
+          Width = 111
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Bottom = 12
+          ItemHeight = 15
+          ItemIndex = 0
+          Items.Strings = (
+            'Rotate by 0°'
+            'Rotate by 90°'
+            'Rotate by 180°'
+            'Rotate by 270°'
+            'Mirror horizontally'
+            'Mirror vertically'
+          )
+          OnChange = CbTransformChange
+          Style = csDropDownList
+          TabOrder = 2
+          Text = 'Rotate by 0°'
+        end
+      end
+      object ThumbNail: TJvThumbnail
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = Panel5
+        AnchorSideBottom.Control = Panel5
+        AnchorSideBottom.Side = asrBottom
+        Left = 2
+        Height = 175
+        Top = 0
+        Width = 152
+        Anchors = [akTop, akLeft, akBottom]
+        BorderSpacing.Left = 2
+        BorderSpacing.Right = 8
+        ClientHeight = 175
+        ClientWidth = 152
+        Constraints.MinWidth = 152
+        TabOrder = 1
+        OnClick = ThumbNailClick
+        ShadowColor = clSilver
+        TitleColor = clBtnFace
+        TitleFont.Color = clWindowText
+      end
+      object Panel1: TPanel
+        AnchorSideLeft.Control = ThumbNail
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = ThumbNail
+        AnchorSideBottom.Side = asrBottom
+        Left = 162
+        Height = 175
+        Top = 0
+        Width = 261
+        AutoSize = True
+        BevelInner = bvRaised
+        BevelOuter = bvLowered
+        ClientHeight = 175
+        ClientWidth = 261
+        TabOrder = 2
+        object CbAsButton: TCheckBox
+          AnchorSideLeft.Control = Panel1
+          AnchorSideTop.Control = Panel1
+          Left = 10
+          Height = 19
+          Hint = 'This will give a button effect when the thumbnail is clicked '
+          Top = 8
+          Width = 69
+          BorderSpacing.Left = 8
+          BorderSpacing.Top = 6
+          Caption = 'AsButton'
+          Checked = True
+          OnClick = CbAsButtonClick
+          State = cbChecked
+          TabOrder = 0
+        end
+        object CbAutoLoad: TCheckBox
+          AnchorSideLeft.Control = CbAsButton
+          AnchorSideTop.Control = CbAsButton
+          AnchorSideTop.Side = asrBottom
+          Left = 10
+          Height = 19
+          Hint = 'If AutoLoad = true when you pass a name to the filename it automatically loads it else not(for Future reference where the will be a thumblist file)'
+          Top = 31
+          Width = 69
+          BorderSpacing.Top = 4
+          Caption = 'Autoload'
+          Checked = True
+          OnClick = CbAutoLoadClick
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 1
+        end
+        object CbMinimizeMem: TCheckBox
+          AnchorSideLeft.Control = CbAsButton
+          AnchorSideTop.Control = CbAutoLoad
+          AnchorSideTop.Side = asrBottom
+          Left = 10
+          Height = 19
+          Hint = 'This will forse the thumbimage to convert all the thumbs in BMP and reduce memory usage us much as possible'
+          Top = 54
+          Width = 114
+          BorderSpacing.Top = 4
+          BorderSpacing.Right = 12
+          BorderSpacing.Bottom = 8
+          Caption = 'MinimizeMemory'
+          Checked = True
+          OnClick = CbMinimizeMemClick
+          ParentShowHint = False
+          ShowHint = True
+          State = cbChecked
+          TabOrder = 2
+        end
+        object GbTitlePlacement: TRadioGroup
+          AnchorSideLeft.Control = CbMinimizeMem
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = Panel1
+          AnchorSideRight.Side = asrBottom
+          Left = 136
+          Height = 70
+          Hint = 'The position of the thumbnail''s title'
+          Top = 11
+          Width = 115
+          AutoFill = False
+          AutoSize = True
+          BorderSpacing.Top = 9
+          BorderSpacing.Right = 8
+          BorderSpacing.InnerBorder = 4
+          Caption = ' Title Placement '
+          ChildSizing.LeftRightSpacing = 16
+          ChildSizing.VerticalSpacing = 4
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 1
+          ClientHeight = 50
+          ClientWidth = 111
+          ItemIndex = 0
+          Items.Strings = (
+            'T_Up'
+            'T_Down'
+          )
+          OnClick = GbTitlePlacementClick
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 3
+        end
+        object BtnExit: TButton
+          AnchorSideLeft.Control = GbTitlePlacement
+          AnchorSideTop.Control = GbTitlePlacement
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = GbTitlePlacement
+          AnchorSideRight.Side = asrBottom
+          Left = 136
+          Height = 25
+          Top = 89
+          Width = 115
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Top = 8
+          Caption = 'EXIT'
+          ModalResult = 1
+          TabOrder = 4
+        end
+        object EdThumbTitle: TEdit
+          AnchorSideLeft.Control = CbAsButton
+          AnchorSideTop.Control = LblThumbTitle
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = BtnExit
+          AnchorSideRight.Side = asrBottom
+          AnchorSideBottom.Side = asrBottom
+          Left = 10
+          Height = 23
+          Hint = 'You can set the thumbnails title to what ever you want it to be '
+          Top = 142
+          Width = 241
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Bottom = 8
+          TabOrder = 5
+        end
+        object LblThumbTitle: TLabel
+          AnchorSideLeft.Control = CbAsButton
+          AnchorSideTop.Control = BtnExit
+          AnchorSideTop.Side = asrBottom
+          Left = 10
+          Height = 15
+          Hint = 'You can set the thumbnails title to what ever you want it to be '
+          Top = 123
+          Width = 84
+          BorderSpacing.Top = 9
+          BorderSpacing.Bottom = 4
+          Caption = 'Thumbnail Title'
+          ParentColor = False
+        end
+        object SpinEdit1: TSpinEdit
+          AnchorSideLeft.Control = LblMargin
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = BtnExit
+          AnchorSideTop.Side = asrCenter
+          Left = 60
+          Height = 23
+          Top = 90
+          Width = 60
+          BorderSpacing.Left = 12
+          OnChange = SpinEdit1Change
+          TabOrder = 6
+        end
+        object LblMargin: TLabel
+          AnchorSideLeft.Control = Panel1
+          AnchorSideTop.Control = BtnExit
+          AnchorSideTop.Side = asrCenter
+          Left = 10
+          Height = 15
+          Top = 94
+          Width = 38
+          BorderSpacing.Left = 8
+          Caption = 'Margin'
+          ParentColor = False
+        end
+      end
+    end
+    object Panel2: TPanel
+      AnchorSideTop.Side = asrBottom
+      Left = 4
+      Height = 413
+      Top = 183
+      Width = 596
+      Align = alClient
+      BorderSpacing.Around = 4
+      BevelOuter = bvNone
+      ClientHeight = 413
+      ClientWidth = 596
+      TabOrder = 1
+      OnResize = Panel2Resize
+      object ThumbImage: TJvThumbImage
+        AnchorSideLeft.Control = Panel5
+        AnchorSideTop.Control = Panel5
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Panel5
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Control = Panel7
+        AnchorSideBottom.Side = asrBottom
+        Left = 0
+        Height = 378
+        Top = 0
+        Width = 554
+        AutoSize = True
+        BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 4
+        OnMouseDown = ThumbImageMouseDown
+        OnMouseMove = ThumbImageMouseMove
+        OnMouseUp = ThumbImageMouseUp
+        IgnoreMouse = False
+        Angle = AT0
+        Zoom = 0
+      end
+    end
+  end
+end

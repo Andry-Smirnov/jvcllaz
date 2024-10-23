@@ -1,0 +1,996 @@
+object MainForm: TMainForm
+  Left = 435
+  Height = 496
+  Top = 239
+  Width = 947
+  AutoSize = True
+  Caption = 'JvPanel demo'
+  ClientHeight = 496
+  ClientWidth = 947
+  OnCreate = FormCreate
+  ShowHint = True
+  LCLVersion = '2.1.0.0'
+  object gbArrangeSettings: TGroupBox
+    AnchorSideLeft.Control = gbCaption
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 504
+    Height = 326
+    Top = 12
+    Width = 213
+    AutoSize = True
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 12
+    Caption = 'Arrange settings'
+    ClientHeight = 306
+    ClientWidth = 209
+    TabOrder = 0
+    object cbAutoArrange: TCheckBox
+      AnchorSideLeft.Control = gbArrangeSettings
+      AnchorSideTop.Control = btnAddButton
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 35
+      Width = 89
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 2
+      Caption = 'Auto arrange'
+      OnChange = cbAutoArrangeChange
+      TabOrder = 0
+    end
+    object cbWrapControls: TCheckBox
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = cbAutoArrange
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 56
+      Width = 94
+      BorderSpacing.Top = 2
+      Caption = 'Wrap controls'
+      Checked = True
+      OnChange = cbWrapControlsChange
+      State = cbChecked
+      TabOrder = 1
+    end
+    object seHorDistance: TSpinEdit
+      AnchorSideLeft.Control = lblHorDistance
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbHorAlignLines
+      AnchorSideTop.Side = asrBottom
+      Left = 142
+      Height = 23
+      Top = 100
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Left = 32
+      BorderSpacing.Top = 4
+      OnChange = seHorDistanceChange
+      TabOrder = 2
+    end
+    object seVertDistance: TSpinEdit
+      AnchorSideLeft.Control = seHorDistance
+      AnchorSideTop.Control = seHorDistance
+      AnchorSideTop.Side = asrBottom
+      Left = 142
+      Height = 23
+      Top = 125
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seVertDistanceChange
+      TabOrder = 3
+    end
+    object lblHorDistance: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = seHorDistance
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 104
+      Width = 102
+      BorderSpacing.Top = 8
+      Caption = 'Horizontal distance'
+      ParentColor = False
+    end
+    object lblVertDistance: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = seVertDistance
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 129
+      Width = 85
+      Caption = 'Vertical distance'
+      ParentColor = False
+    end
+    object lblBorderLeft: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = seBorderLeft
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 154
+      Width = 58
+      BorderSpacing.Top = 8
+      Caption = 'Left border'
+      ParentColor = False
+    end
+    object seBorderLeft: TSpinEdit
+      AnchorSideLeft.Control = seVertDistance
+      AnchorSideTop.Control = seVertDistance
+      AnchorSideTop.Side = asrBottom
+      Left = 142
+      Height = 23
+      Top = 150
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seBorderLeftChange
+      TabOrder = 4
+    end
+    object seBorderTop: TSpinEdit
+      AnchorSideLeft.Control = seVertDistance
+      AnchorSideTop.Control = seBorderLeft
+      AnchorSideTop.Side = asrBottom
+      Left = 142
+      Height = 23
+      Top = 175
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 8
+      OnChange = seBorderTopChange
+      TabOrder = 5
+    end
+    object lblBorderTop: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = seBorderTop
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 179
+      Width = 58
+      BorderSpacing.Top = 8
+      Caption = 'Top border'
+      ParentColor = False
+    end
+    object btnAddButton: TButton
+      AnchorSideLeft.Control = gbArrangeSettings
+      AnchorSideTop.Control = gbArrangeSettings
+      Left = 8
+      Height = 25
+      Top = 4
+      Width = 87
+      AutoSize = True
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 4
+      BorderSpacing.Bottom = 6
+      Caption = 'Add button'
+      OnClick = btnAddButtonClick
+      TabOrder = 6
+    end
+    object btnClear: TButton
+      AnchorSideLeft.Control = btnAddButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnAddButton
+      Left = 103
+      Height = 25
+      Top = 4
+      Width = 53
+      AutoSize = True
+      BorderSpacing.Left = 8
+      Caption = 'Clear'
+      OnClick = btnClearClick
+      TabOrder = 7
+    end
+    object cbHorAlignLines: TCheckBox
+      AnchorSideLeft.Control = cbWrapControls
+      AnchorSideTop.Control = cbWrapControls
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Hint = 'HorizontalAlignLines aligns the control-lines. This only works if WrapControls or MaxControlsPerLine is enabled'
+      Top = 77
+      Width = 159
+      BorderSpacing.Top = 2
+      Caption = 'Horizontal alignment lines'
+      OnChange = cbHorAlignLinesChange
+      TabOrder = 8
+    end
+    object lblMaxCtrlsPerLine: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = seMaxCtrlsPerLine
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 204
+      Width = 110
+      BorderSpacing.Top = 8
+      Caption = 'Max controls per line'
+      ParentColor = False
+    end
+    object seMaxCtrlsPerLine: TSpinEdit
+      AnchorSideLeft.Control = seVertDistance
+      AnchorSideTop.Control = seBorderTop
+      AnchorSideTop.Side = asrBottom
+      Left = 142
+      Height = 23
+      Hint = 'MaxControlsPerLine specifies the max. number of controls that fit into a line. '#13#10'The following controls are moved to the next line. A value of zero means no limit. '#13#10'WrapControls is still considered.'
+      Top = 200
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 8
+      OnChange = seMaxCtrlsPerLineChange
+      TabOrder = 9
+    end
+    object lblArrangeSettingsAutoSize: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = cmbArrangeSettingsAutoSize
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 229
+      Width = 48
+      Caption = 'Auto size'
+      ParentColor = False
+    end
+    object cmbArrangeSettingsAutoSize: TComboBox
+      AnchorSideLeft.Control = cmbVertAlignment
+      AnchorSideTop.Control = seMaxCtrlsPerLine
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = seMaxCtrlsPerLine
+      AnchorSideRight.Side = asrBottom
+      Left = 101
+      Height = 23
+      Top = 225
+      Width = 91
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'asNone'
+        'asWidth'
+        'asHeight'
+        'asBoth'
+      )
+      OnChange = cmbArrangeSettingsAutoSizeChange
+      Style = csDropDownList
+      TabOrder = 10
+      Text = 'asNone'
+    end
+    object cmbHorAlignment: TComboBox
+      AnchorSideLeft.Control = cmbVertAlignment
+      AnchorSideTop.Control = cmbArrangeSettingsAutoSize
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = seMaxCtrlsPerLine
+      AnchorSideRight.Side = asrBottom
+      Left = 101
+      Height = 23
+      Hint = 'HorizontalAlignment aligns the arranged control-block in the panel unless AutoSize is asBoth or asWidth.'
+      Top = 250
+      Width = 91
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'asLeft'
+        'asCenter'
+        'asRight'
+      )
+      OnChange = cmbHorAlignmentChange
+      Style = csDropDownList
+      TabOrder = 11
+      Text = 'asLeft'
+    end
+    object lblHorAlignment: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = cmbHorAlignment
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 254
+      Width = 77
+      Caption = 'Hor alignment'
+      ParentColor = False
+    end
+    object lblVertAlignment: TLabel
+      AnchorSideLeft.Control = cbAutoArrange
+      AnchorSideTop.Control = cmbVertAlignment
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 279
+      Width = 77
+      Caption = 'Vert alignment'
+      ParentColor = False
+    end
+    object cmbVertAlignment: TComboBox
+      AnchorSideLeft.Control = lblVertAlignment
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cmbHorAlignment
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = seMaxCtrlsPerLine
+      AnchorSideRight.Side = asrBottom
+      Left = 101
+      Height = 23
+      Hint = 'VerticalAlignment aligns the arranged control-block in the panel '#13#10'unless AutoSize is asBoth or asHeight.'
+      Top = 275
+      Width = 91
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 16
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 8
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'asTop'
+        'asVCenter'
+        'asBottom'
+      )
+      OnChange = cmbVertAlignmentChange
+      Style = csDropDownList
+      TabOrder = 12
+      Text = 'asTop'
+    end
+  end
+  object gbCaption: TGroupBox
+    AnchorSideLeft.Control = Panel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = gbArrangeSettings
+    AnchorSideRight.Side = asrBottom
+    Left = 296
+    Height = 126
+    Top = 12
+    Width = 192
+    AutoSize = True
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 12
+    Caption = 'Caption'
+    ClientHeight = 106
+    ClientWidth = 188
+    TabOrder = 1
+    object edCaption: TEdit
+      AnchorSideLeft.Control = gbCaption
+      AnchorSideTop.Control = gbCaption
+      AnchorSideRight.Control = gbCaption
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 23
+      Top = 4
+      Width = 172
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      OnChange = edCaptionChange
+      TabOrder = 0
+    end
+    object lblAlignment: TLabel
+      AnchorSideLeft.Control = edCaption
+      AnchorSideTop.Control = cmbAlignment
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 33
+      Width = 56
+      Caption = 'Alignment'
+      ParentColor = False
+    end
+    object lblLayout: TLabel
+      AnchorSideLeft.Control = edCaption
+      AnchorSideTop.Control = cmbLayout
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 58
+      Width = 36
+      Caption = 'Layout'
+      ParentColor = False
+    end
+    object cmbAlignment: TComboBox
+      AnchorSideLeft.Control = lblAlignment
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = edCaption
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = edCaption
+      AnchorSideRight.Side = asrBottom
+      Left = 80
+      Height = 23
+      Top = 29
+      Width = 100
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 16
+      BorderSpacing.Top = 2
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        'taLeftJustify'
+        'taRightJustify'
+        'taCenter'
+      )
+      OnChange = cmbAlignmentChange
+      Style = csDropDownList
+      TabOrder = 1
+      Text = 'taCenter'
+    end
+    object cmbLayout: TComboBox
+      AnchorSideLeft.Control = cmbAlignment
+      AnchorSideTop.Control = cmbAlignment
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = edCaption
+      AnchorSideRight.Side = asrBottom
+      Left = 80
+      Height = 23
+      Top = 54
+      Width = 100
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      ItemHeight = 15
+      ItemIndex = 1
+      Items.Strings = (
+        'tlTop'
+        'tlCenter'
+        'tlBottom'
+      )
+      OnChange = cmbLayoutChange
+      Style = csDropDownList
+      TabOrder = 2
+      Text = 'tlCenter'
+    end
+    object cbMultiLine: TCheckBox
+      AnchorSideLeft.Control = lblAlignment
+      AnchorSideTop.Control = cmbLayout
+      AnchorSideTop.Side = asrBottom
+      Left = 8
+      Height = 19
+      Top = 79
+      Width = 72
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 8
+      Caption = 'Multi-line'
+      OnChange = cbMultiLineChange
+      TabOrder = 3
+    end
+  end
+  object gbBorder: TGroupBox
+    AnchorSideLeft.Control = gbCaption
+    AnchorSideTop.Control = gbCaption
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = gbCaption
+    AnchorSideRight.Side = asrBottom
+    Left = 296
+    Height = 107
+    Top = 150
+    Width = 192
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    Caption = 'Border'
+    ClientHeight = 87
+    ClientWidth = 188
+    TabOrder = 2
+    object cmbBorderStyle: TComboBox
+      AnchorSideLeft.Control = lblBorderStyle
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = gbBorder
+      AnchorSideRight.Control = gbBorder
+      AnchorSideRight.Side = asrBottom
+      Left = 80
+      Height = 23
+      Top = 4
+      Width = 100
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 47
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'bsNone'
+        'bsSingle'
+      )
+      OnChange = cmbBorderStyleChange
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'bsNone'
+    end
+    object lblBorderStyle: TLabel
+      AnchorSideLeft.Control = gbBorder
+      AnchorSideTop.Control = cmbBorderStyle
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 8
+      Width = 25
+      BorderSpacing.Left = 8
+      Caption = 'Style'
+      ParentColor = False
+    end
+    object seBorderWidth: TSpinEdit
+      AnchorSideLeft.Control = cmbBorderStyle
+      AnchorSideTop.Control = cmbBorderStyle
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = cmbBorderStyle
+      AnchorSideRight.Side = asrBottom
+      Left = 80
+      Height = 23
+      Top = 29
+      Width = 100
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      OnChange = seBorderWidthChange
+      TabOrder = 1
+    end
+    object lblBorderWidth: TLabel
+      AnchorSideLeft.Control = lblBorderStyle
+      AnchorSideTop.Control = seBorderWidth
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 33
+      Width = 32
+      BorderSpacing.Top = 8
+      Caption = 'Width'
+      ParentColor = False
+    end
+    object cbFlatBorder: TCheckBox
+      AnchorSideLeft.Control = lblBorderWidth
+      AnchorSideTop.Control = cbFlatBorderColor
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 19
+      Top = 57
+      Width = 77
+      BorderSpacing.Top = 6
+      Caption = 'Flat border'
+      OnChange = cbFlatBorderChange
+      TabOrder = 2
+    end
+    object cbFlatBorderColor: TColorButton
+      AnchorSideLeft.Control = cbFlatBorder
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = seBorderWidth
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = seBorderWidth
+      AnchorSideRight.Side = asrBottom
+      Left = 97
+      Height = 25
+      Top = 54
+      Width = 83
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 8
+      BorderWidth = 2
+      ButtonColorAutoSize = False
+      ButtonColorSize = 16
+      ButtonColor = clBlack
+      Caption = 'Color'
+      Margin = 4
+      OnColorChanged = cbFlatBorderColorColorChanged
+    end
+  end
+  object gbMisc: TGroupBox
+    AnchorSideLeft.Control = gbArrangeSettings
+    AnchorSideTop.Control = gbArrangeSettings
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = gbArrangeSettings
+    AnchorSideRight.Side = asrBottom
+    Left = 504
+    Height = 51
+    Top = 350
+    Width = 213
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    BorderSpacing.Bottom = 16
+    Caption = 'Misc'
+    ClientHeight = 31
+    ClientWidth = 209
+    TabOrder = 3
+    object cbMovable: TCheckBox
+      AnchorSideLeft.Control = gbMisc
+      AnchorSideTop.Control = gbMisc
+      Left = 16
+      Height = 19
+      Top = 4
+      Width = 66
+      BorderSpacing.Left = 16
+      BorderSpacing.Top = 4
+      BorderSpacing.Bottom = 8
+      Caption = 'Movable'
+      OnChange = cbMovableChange
+      TabOrder = 0
+    end
+    object cbSizeable: TCheckBox
+      AnchorSideLeft.Control = cbMovable
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbMovable
+      Left = 98
+      Height = 19
+      Top = 4
+      Width = 62
+      BorderSpacing.Left = 16
+      Caption = 'Sizeable'
+      OnChange = cbSizeableChange
+      TabOrder = 1
+    end
+  end
+  object gbBevel: TGroupBox
+    AnchorSideLeft.Control = gbBorder
+    AnchorSideTop.Control = gbBorder
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = gbCaption
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = gbBorder
+    AnchorSideBottom.Side = asrBottom
+    Left = 296
+    Height = 105
+    Top = 269
+    Width = 192
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    Caption = 'Bevel'
+    ClientHeight = 85
+    ClientWidth = 188
+    TabOrder = 4
+    object cmbBevelInner: TComboBox
+      AnchorSideLeft.Control = lblBevelInner
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = gbBevel
+      AnchorSideRight.Control = gbBevel
+      AnchorSideRight.Side = asrBottom
+      Left = 58
+      Height = 23
+      Top = 4
+      Width = 122
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 23
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'bvNone'
+        'bvLowered'
+        'bvRaised'
+        'bvSpace'
+      )
+      OnChange = cmbBevelInnerChange
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'bvNone'
+    end
+    object lblBevelInner: TLabel
+      AnchorSideLeft.Control = gbBevel
+      AnchorSideTop.Control = cmbBevelInner
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 8
+      Width = 27
+      BorderSpacing.Left = 8
+      Caption = 'Inner'
+      ParentColor = False
+    end
+    object seBevelWidth: TSpinEdit
+      AnchorSideLeft.Control = cmbBevelInner
+      AnchorSideTop.Control = cmbBevelOuter
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = cmbBevelInner
+      AnchorSideRight.Side = asrBottom
+      Left = 58
+      Height = 23
+      Top = 54
+      Width = 122
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      BorderSpacing.Bottom = 8
+      OnChange = seBevelWidthChange
+      TabOrder = 1
+    end
+    object lblBevelWidth: TLabel
+      AnchorSideLeft.Control = lblBevelInner
+      AnchorSideTop.Control = seBevelWidth
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 58
+      Width = 32
+      BorderSpacing.Top = 8
+      Caption = 'Width'
+      ParentColor = False
+    end
+    object lblBevelOuter: TLabel
+      AnchorSideLeft.Control = lblBevelInner
+      AnchorSideTop.Control = cmbBevelOuter
+      AnchorSideTop.Side = asrCenter
+      Left = 8
+      Height = 15
+      Top = 33
+      Width = 30
+      Caption = 'Outer'
+      ParentColor = False
+    end
+    object cmbBevelOuter: TComboBox
+      AnchorSideLeft.Control = cmbBevelInner
+      AnchorSideTop.Control = cmbBevelInner
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = gbBevel
+      AnchorSideRight.Side = asrBottom
+      Left = 58
+      Height = 23
+      Top = 29
+      Width = 122
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 2
+      BorderSpacing.Right = 8
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        'bvNone'
+        'bvLowered'
+        'bvRaised'
+        'bvSpace'
+      )
+      OnChange = cmbBevelInnerChange
+      Style = csDropDownList
+      TabOrder = 2
+      Text = 'bvRaised'
+    end
+  end
+  object gbHotTrack: TGroupBox
+    AnchorSideLeft.Control = gbArrangeSettings
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = gbArrangeSettings
+    Left = 733
+    Height = 365
+    Top = 12
+    Width = 200
+    AutoSize = True
+    BorderSpacing.Left = 16
+    BorderSpacing.Right = 16
+    Caption = 'Hot tracking'
+    ClientHeight = 345
+    ClientWidth = 196
+    Constraints.MinWidth = 200
+    TabOrder = 5
+    object cbHotTrack: TCheckBox
+      AnchorSideLeft.Control = gbHotTrack
+      AnchorSideTop.Control = gbHotTrack
+      Left = 8
+      Height = 19
+      Top = 4
+      Width = 103
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 4
+      Caption = 'HotTrack active'
+      OnChange = cbHotTrackChange
+      TabOrder = 0
+    end
+    object gbHotTrackOptions: TGroupBox
+      AnchorSideLeft.Control = cbHotTrack
+      AnchorSideTop.Control = CheckListBox1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = gbHotTrack
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 109
+      Top = 228
+      Width = 180
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 12
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Caption = 'Hot track options'
+      ClientHeight = 89
+      ClientWidth = 176
+      TabOrder = 1
+      object cbHotTrackOptionsEnabled: TCheckBox
+        AnchorSideLeft.Control = gbHotTrackOptions
+        AnchorSideTop.Control = gbHotTrackOptions
+        Left = 8
+        Height = 19
+        Top = 6
+        Width = 62
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 6
+        Caption = 'Enabled'
+        OnChange = cbHotTrackOptionsEnabledChange
+        TabOrder = 0
+      end
+      object cbHotTrackOptionsColor: TColorButton
+        AnchorSideLeft.Control = cbHotTrackOptionsEnabled
+        AnchorSideTop.Control = cbHotTrackOptionsEnabled
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = gbHotTrackOptions
+        AnchorSideRight.Side = asrBottom
+        Left = 8
+        Height = 25
+        Top = 29
+        Width = 160
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 8
+        BorderWidth = 2
+        ButtonColorAutoSize = False
+        ButtonColorSize = 16
+        ButtonColor = clBtnFace
+        Caption = 'Color'
+        Margin = 4
+        OnColorChanged = cbHotTrackOptionsColorColorChanged
+      end
+      object cbHotTrackOptionsFrameColor: TColorButton
+        AnchorSideLeft.Control = cbHotTrackOptionsColor
+        AnchorSideTop.Control = cbHotTrackOptionsColor
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = cbHotTrackOptionsColor
+        AnchorSideRight.Side = asrBottom
+        Left = 8
+        Height = 25
+        Top = 56
+        Width = 160
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 2
+        BorderSpacing.Bottom = 8
+        BorderWidth = 2
+        ButtonColorAutoSize = False
+        ButtonColorSize = 16
+        ButtonColor = clBlack
+        Caption = 'Frame color'
+        Margin = 4
+        OnColorChanged = cbHotTrackOptionsFrameColorColorChanged
+      end
+      object cbHotTrackoptionsFrameVisible: TCheckBox
+        AnchorSideLeft.Control = cbHotTrackOptionsEnabled
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = cbHotTrackOptionsEnabled
+        Left = 78
+        Height = 19
+        Top = 6
+        Width = 89
+        BorderSpacing.Left = 8
+        Caption = 'Frame visible'
+        OnChange = cbHotTrackoptionsFrameVisibleChange
+        TabOrder = 1
+      end
+    end
+    object btnHotTrackFont: TButton
+      AnchorSideLeft.Control = cbHotTrack
+      AnchorSideTop.Control = cbHotTrack
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = gbHotTrack
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 25
+      Top = 27
+      Width = 180
+      Anchors = [akTop, akLeft, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      Caption = 'Hot track font'
+      OnClick = btnHotTrackFontClick
+      TabOrder = 2
+    end
+    object CheckListBox1: TCheckListBox
+      AnchorSideLeft.Control = btnHotTrackFont
+      AnchorSideTop.Control = btnHotTrackFont
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = btnHotTrackFont
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 160
+      Hint = 'Defines how HotTrackFont follows changes in the panel''s normal Font'
+      Top = 56
+      Width = 180
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 4
+      Items.Strings = (
+        'hoFollowFont'
+        'hoPreserveCharSet'
+        'hoPreserveColor'
+        'hoPreserveHeight'
+        'hoPreserveName'
+        'hoPreservePitch'
+        'hoPreserveStyle'
+        'hoPreserveOrientation'
+        'hoPreserveQuality'
+      )
+      ItemHeight = 17
+      TabOrder = 3
+      Data = {
+        09000000000000000000000000
+      }
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 496
+    Top = 0
+    Width = 280
+    Align = alLeft
+    BevelInner = bvLowered
+    BevelOuter = bvNone
+    BorderWidth = 4
+    ClientHeight = 496
+    ClientWidth = 280
+    ParentColor = False
+    TabOrder = 6
+    object JvPanel1: TJvPanel
+      Left = 56
+      Height = 160
+      Hint = 'This is TJvPanel.'
+      Top = 31
+      Width = 160
+      Caption = 'TJvPanel in action!'
+      TabOrder = 0
+    end
+  end
+  object btnFont: TButton
+    AnchorSideLeft.Control = cbColor
+    AnchorSideTop.Control = cbColor
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    Left = 296
+    Height = 25
+    Top = 415
+    Width = 50
+    AutoSize = True
+    BorderSpacing.Top = 4
+    BorderSpacing.Bottom = 16
+    Caption = 'Font'
+    OnClick = btnFontClick
+    TabOrder = 7
+  end
+  object cbColor: TColorButton
+    AnchorSideLeft.Control = gbBevel
+    AnchorSideTop.Control = gbBevel
+    AnchorSideTop.Side = asrBottom
+    Left = 296
+    Height = 25
+    Top = 386
+    Width = 67
+    BorderSpacing.Top = 12
+    BorderWidth = 2
+    ButtonColorAutoSize = False
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    Caption = 'Color'
+    Margin = 4
+    OnColorChanged = cbColorColorChanged
+  end
+  object cbHintColor: TColorButton
+    AnchorSideLeft.Control = cbColor
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = cbColor
+    Left = 367
+    Height = 25
+    Top = 386
+    Width = 91
+    BorderSpacing.Left = 4
+    BorderWidth = 2
+    ButtonColorAutoSize = False
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    Caption = 'Hint color'
+    Margin = 4
+    OnColorChanged = cbHintColorColorChanged
+  end
+  object FontDialog: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 880
+    top = 8
+  end
+end

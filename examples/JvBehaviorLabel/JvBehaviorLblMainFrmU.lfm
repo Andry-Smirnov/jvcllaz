@@ -1,0 +1,278 @@
+object JvBehaviorLblMainFrm: TJvBehaviorLblMainFrm
+  Left = 327
+  Height = 304
+  Top = 118
+  Width = 572
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'JvBehaviorLabel Demo'
+  ClientHeight = 304
+  ClientWidth = 572
+  Font.Color = clWindowText
+  OnActivate = FormActivate
+  LCLVersion = '2.1.0.0'
+  object lblCodeBreaker: TJvBehaviorLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 24
+    Height = 22
+    Top = 18
+    Width = 259
+    Behavior = 'CodeBreaker'
+    BehaviorOptions.DecodedText = 'ENTER THE MATRIX!'
+    BehaviorOptions.Interval = 5
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Left = 24
+    BorderSpacing.Top = 18
+    Caption = 'x6/yhjSkhHHDski"=90sd'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    ShowAccelChar = False
+    Transparent = False
+  end
+  object lblAppearing: TJvBehaviorLabel
+    Left = 301
+    Height = 22
+    Top = 16
+    Width = 259
+    Behavior = 'Appearing'
+    BehaviorOptions.Delay = 10
+    BehaviorOptions.Pixels = 2
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Left = 18
+    BorderSpacing.Right = 24
+    Caption = 'MAKE ME APPEAR'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object lblBlinking: TJvBehaviorLabel
+    AnchorSideLeft.Control = lblCodeBreaker
+    AnchorSideTop.Control = btnCodeBreak
+    AnchorSideTop.Side = asrBottom
+    Left = 24
+    Height = 22
+    Top = 91
+    Width = 259
+    Behavior = 'Blinking'
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Top = 18
+    Caption = 'BLINK ME'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object lblBouncing: TJvBehaviorLabel
+    Left = 301
+    Height = 22
+    Top = 91
+    Width = 259
+    Behavior = 'Bouncing'
+    BehaviorOptions.Interval = 12
+    BehaviorOptions.Pixels = 4
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'BOUNCE ME'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object lblScrolling: TJvBehaviorLabel
+    AnchorSideLeft.Control = lblCodeBreaker
+    AnchorSideTop.Control = btnBlink
+    AnchorSideTop.Side = asrBottom
+    Left = 24
+    Height = 22
+    Top = 164
+    Width = 259
+    Behavior = 'Scrolling'
+    BehaviorOptions.Interval = 70
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Top = 18
+    Caption = 'SCROLL ME'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object lblSpecial: TJvBehaviorLabel
+    AnchorSideLeft.Control = lblScrolling
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = lblScrolling
+    Left = 301
+    Height = 22
+    Top = 164
+    Width = 259
+    Behavior = 'Special'
+    BehaviorOptions.Interval = 35
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Left = 18
+    BorderSpacing.Right = 24
+    Caption = 'I ACT IN A SPECIAL WAY'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object lblTyping: TJvBehaviorLabel
+    AnchorSideLeft.Control = lblCodeBreaker
+    AnchorSideTop.Control = btnScroll
+    AnchorSideTop.Side = asrBottom
+    Left = 24
+    Height = 22
+    Top = 237
+    Width = 259
+    Behavior = 'Typing'
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Top = 18
+    Caption = 'TYPE THE TEXT'
+    Color = clBlack
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Courier New'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object btnCodeBreak: TButton
+    AnchorSideLeft.Control = lblCodeBreaker
+    AnchorSideTop.Control = lblCodeBreaker
+    AnchorSideTop.Side = asrBottom
+    Left = 38
+    Height = 25
+    Top = 48
+    Width = 80
+    BorderSpacing.Left = 14
+    BorderSpacing.Top = 8
+    Caption = '&CodeBreaker'
+    OnClick = btnCodeBreakClick
+    TabOrder = 0
+  end
+  object btnAppear: TButton
+    AnchorSideLeft.Control = btnSpecial
+    AnchorSideTop.Control = btnCodeBreak
+    Left = 315
+    Height = 25
+    Top = 48
+    Width = 80
+    Caption = '&Appearing'
+    OnClick = btnAppearClick
+    TabOrder = 1
+  end
+  object btnBlink: TButton
+    AnchorSideLeft.Control = btnCodeBreak
+    AnchorSideTop.Control = lblBlinking
+    AnchorSideTop.Side = asrBottom
+    Left = 38
+    Height = 25
+    Top = 121
+    Width = 80
+    BorderSpacing.Top = 8
+    Caption = '&Blinking'
+    OnClick = btnBlinkClick
+    TabOrder = 2
+  end
+  object btnBounce: TButton
+    AnchorSideLeft.Control = btnSpecial
+    AnchorSideTop.Control = btnBlink
+    Left = 315
+    Height = 25
+    Top = 121
+    Width = 80
+    Caption = 'B&ouncing'
+    OnClick = btnBounceClick
+    TabOrder = 3
+  end
+  object btnScroll: TButton
+    AnchorSideLeft.Control = btnCodeBreak
+    AnchorSideTop.Control = lblScrolling
+    AnchorSideTop.Side = asrBottom
+    Left = 38
+    Height = 25
+    Top = 194
+    Width = 80
+    BorderSpacing.Top = 8
+    Caption = '&Scrolling'
+    OnClick = btnScrollClick
+    TabOrder = 4
+  end
+  object btnSpecial: TButton
+    AnchorSideLeft.Control = lblSpecial
+    AnchorSideTop.Control = btnScroll
+    Left = 315
+    Height = 25
+    Top = 194
+    Width = 80
+    BorderSpacing.Left = 14
+    Caption = 'S&pecial'
+    OnClick = btnSpecialClick
+    TabOrder = 5
+  end
+  object btnType: TButton
+    AnchorSideLeft.Control = btnCodeBreak
+    AnchorSideTop.Control = lblTyping
+    AnchorSideTop.Side = asrBottom
+    Left = 38
+    Height = 25
+    Top = 267
+    Width = 80
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 18
+    Caption = '&Typing'
+    OnClick = btnTypeClick
+    TabOrder = 6
+  end
+  object btnAll: TButton
+    AnchorSideLeft.Control = btnSpecial
+    AnchorSideTop.Control = btnType
+    Left = 315
+    Height = 25
+    Top = 267
+    Width = 80
+    Caption = 'Do ''em all!'
+    OnClick = btnAllClick
+    TabOrder = 7
+  end
+end

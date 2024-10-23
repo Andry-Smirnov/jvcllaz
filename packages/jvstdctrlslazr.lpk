@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvStdCtrlsLazR"/>
+    <Author Value="Lazarus port by: Werner Pamler"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\run\JvStdCtrls"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvStdCtrls"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Enhanced standard controls of the JVCL library (https://sourceforge.net/projects/jvcl/) (runtime code):
+CalcEdit, button, checkbox, panel, linked controls
+"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="6">
+      <Item1>
+        <Filename Value="..\run\JvStdCtrls\jvbutton.pas"/>
+        <UnitName Value="JvButton"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\run\JvStdCtrls\jvbaseedits.pas"/>
+        <UnitName Value="JvBaseEdits"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\run\JvStdCtrls\jvlinkedcontrols.pas"/>
+        <UnitName Value="JvLinkedControls"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\run\JvStdCtrls\jvcheckbox.pas"/>
+        <UnitName Value="JvCheckBox"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\run\JvStdCtrls\jvpanel.pas"/>
+        <UnitName Value="JvPanel"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\run\JvStdCtrls\jvhottrackpersistent.pas"/>
+        <UnitName Value="JvHotTrackPersistent"/>
+      </Item6>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="JvCoreLazR"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

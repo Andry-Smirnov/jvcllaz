@@ -1,0 +1,77 @@
+object PrintProgress: TPrintProgress
+  Left = 613
+  Height = 161
+  Top = 250
+  Width = 367
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Print Progress'
+  ClientHeight = 161
+  ClientWidth = 367
+  Color = clBtnFace
+  Font.Color = clWindowText
+  FormStyle = fsStayOnTop
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 33
+    Top = 16
+    Width = 335
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    BorderSpacing.Right = 16
+    Caption = 'Generating Report.  This may take a while.  Please be patient.'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Label1
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 16
+    Top = 49
+    Width = 335
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    Caption = 'Processing...'
+    ParentColor = False
+  end
+  object ProgressBar1: TProgressBar
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Label1
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 20
+    Top = 80
+    Width = 335
+    Anchors = [akTop, akLeft, akRight]
+    Max = 200
+    TabOrder = 0
+  end
+  object CancelButton: TBitBtn
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 142
+    Height = 26
+    Top = 120
+    Width = 82
+    AutoSize = True
+    Caption = 'Cancel'
+    Kind = bkCancel
+    OnClick = CancelButtonClick
+    TabOrder = 1
+  end
+end

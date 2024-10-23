@@ -1,0 +1,177 @@
+object Form1: TForm1
+  Left = 374
+  Height = 477
+  Top = 164
+  Width = 594
+  Caption = 'JvDBLookup controls'
+  ClientHeight = 477
+  ClientWidth = 594
+  OnShow = FormShow
+  LCLVersion = '2.1.0.0'
+  object JvDBLookupTreeView1: TJvDBLookupTreeView
+    AnchorSideLeft.Control = Bevel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 307
+    Height = 349
+    Top = 112
+    Width = 271
+    BorderSpacing.Right = 16
+    BorderSpacing.Bottom = 16
+    DataField = 'ID'
+    DataSource = DSPersons
+    KeyField = 'RelID'
+    ListField = 'RelName'
+    ListSource = DSRelationships
+    TabOrder = 0
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    MasterField = 'RelID'
+    DetailField = 'RelParentID'
+    StartMasterValue = '0'
+    Indent = 15
+  end
+  object Label2: TLabel
+    AnchorSideTop.Control = DBNavigator1
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 92
+    Width = 39
+    BorderSpacing.Top = 16
+    Caption = 'Person:'
+    ParentColor = False
+  end
+  object DBNavigator1: TDBNavigator
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Panel1
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 26
+    Top = 50
+    Width = 241
+    BevelOuter = bvNone
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 26
+    ClientWidth = 241
+    DataSource = DSPersons
+    Options = []
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Bevel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label2
+    Left = 307
+    Height = 15
+    Top = 92
+    Width = 146
+    Caption = 'Relationship to protagonist:'
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 34
+    Top = 0
+    Width = 594
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = '(Some) persons in the novel "The Grapes of Wrath" by John Steinbeck'
+    Color = clBlack
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBGrid1: TDBGrid
+    AnchorSideLeft.Control = DBNavigator1
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Bevel1
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 16
+    Height = 350
+    Top = 111
+    Width = 271
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoFillColumns = True
+    BorderSpacing.Top = 4
+    BorderSpacing.Bottom = 16
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Name'
+        Width = 238
+        FieldName = 'Name'
+      end>
+    DataSource = DSPersons
+    TabOrder = 3
+    OnPrepareCanvas = DBGrid1PrepareCanvas
+  end
+  object Bevel1: TBevel
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    Left = 287
+    Height = 50
+    Top = 78
+    Width = 20
+    Shape = bsSpacer
+  end
+  object Persons: TBufDataset
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+      end    
+      item
+        Name = 'Name'
+        DataType = ftString
+        Size = 30
+      end>
+    left = 80
+    top = 160
+  end
+  object Relationships: TBufDataset
+    FieldDefs = <    
+      item
+        Name = 'RelID'
+        DataType = ftInteger
+      end    
+      item
+        Name = 'RelName'
+        DataType = ftString
+        Size = 30
+      end    
+      item
+        Name = 'RelParentID'
+        DataType = ftString
+        Size = 16
+      end>
+    left = 424
+    top = 160
+  end
+  object DSPersons: TDataSource
+    AutoEdit = False
+    DataSet = Persons
+    left = 80
+    top = 224
+  end
+  object DSRelationships: TDataSource
+    AutoEdit = False
+    DataSet = Relationships
+    left = 424
+    top = 224
+  end
+end

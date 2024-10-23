@@ -1,0 +1,326 @@
+object JvFullColorListFrm: TJvFullColorListFrm
+  Left = 389
+  Height = 394
+  Top = 285
+  Width = 457
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'Color list editor'
+  ClientHeight = 394
+  ClientWidth = 457
+  Color = clBtnFace
+  Font.Color = clWindowText
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ListBoxColors: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 8
+    Height = 378
+    Top = 8
+    Width = 328
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Around = 8
+    ItemHeight = 20
+    MultiSelect = True
+    OnDrawItem = ListBoxColorsDrawItem
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+  end
+  object ButtonNew: TButton
+    AnchorSideLeft.Control = ButtonModify
+    AnchorSideTop.Control = ListBoxColors
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 8
+    Width = 76
+    Action = ActionNew
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    TabOrder = 1
+  end
+  object ButtonModify: TButton
+    AnchorSideLeft.Control = ListBoxColors
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = ButtonInsert
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonNew
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 82
+    Width = 76
+    Action = ActionModify
+    AutoSize = True
+    BorderSpacing.Left = 12
+    BorderSpacing.Top = 12
+    BorderSpacing.Right = 8
+    TabOrder = 2
+  end
+  object ButtonDelete: TButton
+    AnchorSideLeft.Control = ButtonModify
+    AnchorSideTop.Control = ButtonModify
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 119
+    Width = 76
+    Action = ActionDelete
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    TabOrder = 3
+  end
+  object ButtonCancel: TButton
+    AnchorSideLeft.Control = ButtonNew
+    AnchorSideTop.Control = ButtonOK
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 306
+    Width = 76
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    Cancel = True
+    Caption = '&Cancel'
+    ModalResult = 2
+    TabOrder = 4
+  end
+  object ButtonOK: TButton
+    AnchorSideLeft.Control = ButtonNew
+    AnchorSideTop.Control = BitBtnMoveDown
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 269
+    Width = 76
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    Caption = '&OK'
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object BitBtnMoveUp: TBitBtn
+    AnchorSideLeft.Control = ButtonNew
+    AnchorSideTop.Control = ButtonClear
+    AnchorSideTop.Side = asrBottom
+    Left = 348
+    Height = 26
+    Top = 193
+    Width = 46
+    Action = ActionMoveUp
+    BorderSpacing.Top = 12
+    GlyphShowMode = gsmAlways
+    Spacing = 0
+    TabOrder = 6
+  end
+  object BitBtnMoveDown: TBitBtn
+    AnchorSideLeft.Control = ButtonNew
+    AnchorSideTop.Control = BitBtnMoveUp
+    AnchorSideTop.Side = asrBottom
+    Left = 348
+    Height = 26
+    Top = 231
+    Width = 46
+    Action = ActionMoveDown
+    BorderSpacing.Top = 12
+    GlyphShowMode = gsmAlways
+    Spacing = 0
+    TabOrder = 7
+  end
+  object ButtonApply: TButton
+    AnchorSideLeft.Control = ButtonNew
+    AnchorSideTop.Control = ButtonCancel
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 343
+    Width = 76
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    BorderSpacing.Bottom = 8
+    Caption = '&Apply'
+    OnClick = ButtonApplyClick
+    TabOrder = 8
+  end
+  object ButtonClear: TButton
+    AnchorSideLeft.Control = ButtonModify
+    AnchorSideTop.Control = ButtonDelete
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 156
+    Width = 76
+    Action = ActionClear
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    TabOrder = 9
+  end
+  object ButtonInsert: TButton
+    AnchorSideLeft.Control = ButtonModify
+    AnchorSideTop.Control = ButtonNew
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ButtonModify
+    AnchorSideRight.Side = asrBottom
+    Left = 348
+    Height = 25
+    Top = 45
+    Width = 76
+    Action = ActionInsert
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 12
+    TabOrder = 10
+  end
+  object JvFullColorDialog: TJvFullColorDialog
+    FullColor = 83886079
+    OnApply = JvFullColorDialogApply
+    left = 88
+    top = 88
+  end
+  object ActionList: TActionList
+    left = 88
+    top = 160
+    object ActionNew: TAction
+      Caption = '&New ...'
+      OnExecute = ActionNewExecute
+      OnUpdate = ActionNewUpdate
+      ShortCut = 16462
+    end
+    object ActionInsert: TAction
+      Caption = '&Insert'
+      OnExecute = ActionInsertExecute
+      OnUpdate = ActionInsertUpdate
+      ShortCut = 16457
+    end
+    object ActionModify: TAction
+      Caption = '&Modify ...'
+      OnExecute = ActionModifyExecute
+      OnUpdate = ActionModifyUpdate
+      ShortCut = 16461
+    end
+    object ActionDelete: TAction
+      Caption = 'D&elete'
+      OnExecute = ActionDeleteExecute
+      OnUpdate = ActionDeleteUpdate
+      ShortCut = 16453
+    end
+    object ActionClear: TAction
+      Caption = '&Clear'
+      OnExecute = ActionClearExecute
+      OnUpdate = ActionClearUpdate
+      ShortCut = 16451
+    end
+    object ActionMoveDown: TAction
+      OnExecute = ActionMoveDownExecute
+      OnUpdate = ActionMoveDownUpdate
+      ShortCut = 16452
+    end
+    object ActionMoveUp: TAction
+      OnExecute = ActionMoveUpExecute
+      OnUpdate = ActionMoveUpUpdate
+      ShortCut = 16469
+    end
+  end
+  object ImageList: TImageList
+    left = 204
+    top = 88
+    Bitmap = {
+      4C69020000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0042924AFF42924AFFFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF6ABD72FF6ABD72FF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF002062
+      230642924AFF6ABD72FF93E89AFF93E89AFF6ABD72FF42924AFF3C8A4306FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004292
+      4AFF6ABD72FF93E89AFF93E89AFF93E89AFF93E89AFF6ABD72FF42924AFFFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0042924AFF4292
+      4AFF42924AFF42924AFF93E89AFF93E89AFF42924AFF42924AFF42924AFF4292
+      4AFFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF42924AFF42924AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF42924AFF42924AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF93E89AFF93E89AFF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0042924AFF4292
+      4AFF42924AFF42924AFF93E89AFF93E89AFF42924AFF42924AFF42924AFF4292
+      4AFFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF004292
+      4AFF6ABD72FF93E89AFF93E89AFF93E89AFF93E89AFF6ABD72FF42924AFFFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF003C8A
+      430642924AFF6ABD72FF93E89AFF93E89AFF6ABD72FF42924AFF20622306FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF0042924AFF6ABD72FF6ABD72FF42924AFFFFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF0042924AFF42924AFFFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00
+    }
+    BitmapAdv = {
+      4C69010000004C7A020000002000000020000000D30000000000000078DAEDD9
+      410AC2301085E1AE7A0EA1D770A53B8FD1A54B8FE15277DEA5F7F116CA140A12
+      9AD484C94C947F6096E57BB44D68275D4795D6E1767A497BD9E7E932B77586C5
+      BE3F1F735B66086DCB0C31BB6686DD38F4D25B7698617F3DF6D21AFEB7F65A86
+      DAF7BCE6B328B535322C7BCB5AC7BCD4359976AAB7FCE8B55A6B30E55BEC3FF8
+      F8F8F8F8F8F8F6BED6770E45FDDAFBC7FAC7C7C7C7C7C7FF4FBF85F99BE7FCB1
+      85F96B0BF3672999A197CEDF6576AFE1E764F8B435FC9C67E17906E47906E679
+      06E861877B147FA5E5F5068FB5A754
+    }
+  end
+end

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvTimeFrameworkLazD"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Original author: Mike Kolter, Lazarus port by W.Pamler"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\design\JvTimeFramework"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\design\JvTimeFramework"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Designtime package of the JVCL &quot;time framework&quot; components: Planners, calendars, Gantt
+NOTE: NOT FULLY WORKING"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="1">
+      <Item1>
+        <Filename Value="..\design\JvTimeFramework\jvtimeframeworkreg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <AddToUsesPkgSection Value="False"/>
+        <UnitName Value="JvTimeFrameworkReg"/>
+      </Item1>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="JvCoreLazD"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="IDEIntf"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="JvTimeFrameworkLazR"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

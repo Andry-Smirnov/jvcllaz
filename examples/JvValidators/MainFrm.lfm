@@ -1,0 +1,275 @@
+object frmMain: TfrmMain
+  Left = 306
+  Height = 270
+  Top = 126
+  Width = 519
+  AutoSize = True
+  Caption = 'JvValidators demo'
+  ClientHeight = 270
+  ClientWidth = 519
+  Color = clBtnFace
+  DefaultMonitor = dmDesktop
+  Font.Color = clWindowText
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 16
+    Height = 15
+    Top = 16
+    Width = 167
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    Caption = 'This edit must have a(ny) value:'
+    FocusControl = edRequired
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = edRequired
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 66
+    Width = 233
+    BorderSpacing.Top = 8
+    Caption = 'This edit must have more than 9  characters:'
+    FocusControl = edRequired10Chars
+    ParentColor = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = edRequired10Chars
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 116
+    Width = 228
+    BorderSpacing.Top = 8
+    Caption = 'This edit must match the reg. expr."A.B.C.":'
+    FocusControl = edRegExpr
+    ParentColor = False
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = edRegExpr
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 162
+    Width = 201
+    BorderSpacing.Top = 8
+    Caption = 'The value must be between 0 and 100:'
+    FocusControl = edRange0to100
+    ParentColor = False
+  end
+  object Label5: TLabel
+    AnchorSideLeft.Control = edRequired10Chars
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label1
+    Left = 281
+    Height = 15
+    Top = 16
+    Width = 35
+    BorderSpacing.Left = 32
+    Caption = 'Result:'
+    ParentColor = False
+  end
+  object edRequired: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = edRequired10Chars
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 35
+    Width = 233
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    TabOrder = 0
+  end
+  object edRequired10Chars: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Label2
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 85
+    Width = 233
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    TabOrder = 1
+  end
+  object edRegExpr: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = edRequired10Chars
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 131
+    Width = 233
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 2
+  end
+  object edRange0to100: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = udRange0to100
+    Left = 16
+    Height = 23
+    Top = 181
+    Width = 212
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 4
+    TabOrder = 3
+    Text = '-1'
+  end
+  object udRange0to100: TUpDown
+    AnchorSideRight.Control = edRequired10Chars
+    AnchorSideRight.Side = asrBottom
+    Left = 232
+    Height = 23
+    Top = 181
+    Width = 17
+    Anchors = [akTop, akRight]
+    Associate = edRange0to100
+    Max = 200
+    Min = -100
+    Position = -1
+    TabOrder = 4
+  end
+  object btnCheck: TButton
+    AnchorSideLeft.Control = btnValSum
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = btnProviderCheck
+    Left = 356
+    Height = 25
+    Top = 228
+    Width = 137
+    AutoSize = True
+    BorderSpacing.Left = 24
+    BorderSpacing.Right = 16
+    Caption = 'Use OnValidateFailed'
+    OnClick = btnCheckClick
+    TabOrder = 7
+  end
+  object btnProviderCheck: TButton
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = edRange0to100
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 25
+    Top = 228
+    Width = 130
+    AutoSize = True
+    BorderSpacing.Top = 24
+    BorderSpacing.Bottom = 16
+    Caption = 'Use JvErrorIndicator'
+    OnClick = btnProviderCheckClick
+    TabOrder = 5
+  end
+  object reResults: TMemo
+    AnchorSideLeft.Control = Label5
+    AnchorSideTop.Control = edRequired
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = edRange0to100
+    AnchorSideBottom.Side = asrBottom
+    Cursor = crArrow
+    Left = 281
+    Height = 169
+    Top = 35
+    Width = 212
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Right = 16
+    Lines.Strings = (
+      'This is a demo for the JvValidators component as well as the JvErrorProvider and, to some extent, the JvValidationSummary component.'
+      ''
+      'By creating and setting up different validators (at run-time in this demo but you can do it at design-time as well), the edit boxes can be checked for validity by a single call to the Validate method. When one of the validators finds that a control doesn''t match the validation criteria, that error can be handled in different ways depending on your needs.'
+      ''
+      'One option is to just check the boolean return value from Validate and display a standard message box telling the user that a value didn''t match.'
+      ''
+      'You can also handle the OnValidateFailed event of all validators at once (the TJvValidators event) or for each validator separately (the TJvBaseValidator event). Yet another option is to assign a TJvValidationSummary component to the ValidationSummary property of tJvValidators and handle it''s OnChange event.'
+      ''
+      'Finally, you can combine the work of the validators with the use of a TJvErrorIndicator.'
+      ''
+      'For more info on TJvErrorIndicator, see the demo for that component (also included).'
+      ''
+      'By clicking any of the buttons below, you can see how the different methods described work in real-time.'
+      ''
+      ''
+    )
+    OnEnter = reResultsEnter
+    ParentColor = True
+    ReadOnly = True
+    ScrollBars = ssBoth
+    TabOrder = 8
+    TabStop = False
+    WordWrap = False
+  end
+  object btnValSum: TButton
+    AnchorSideLeft.Control = btnProviderCheck
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = btnProviderCheck
+    Left = 170
+    Height = 25
+    Top = 228
+    Width = 162
+    AutoSize = True
+    BorderSpacing.Left = 24
+    Caption = 'Use JvValidationSummary'
+    OnClick = btnValSumClick
+    TabOrder = 6
+  end
+  object JvValidators1: TJvValidators
+    OnValidateFailed = JvValidators1ValidateFailed
+    left = 408
+    top = 24
+    object JvRequiredFieldValidator1: TJvRequiredFieldValidator
+      ControlToValidate = edRequired
+      PropertyToValidate = 'Text'
+      ErrorMessage = 'Value in edRequired cannot be empty'
+      AllowBlank = False
+    end
+    object JvCustomValidator1: TJvCustomValidator
+      ControlToValidate = edRequired10Chars
+      PropertyToValidate = 'Text'
+      ErrorMessage = 'Value in "edRequired10Chars" requires at least 10 characters'
+      OnValidate = JvCustomValidator1Validate
+    end
+    object JvRegularExpressionValidator1: TJvRegularExpressionValidator
+      ControlToValidate = edRegExpr
+      PropertyToValidate = 'Text'
+      ErrorMessage = 'Value in "edRegExpr" does not match "A.B.C."'
+      ValidationExpression = '^A.B.C.*'
+    end
+    object JvRangeValidator1: TJvRangeValidator
+      ControlToValidate = udRange0to100
+      PropertyToValidate = 'Position'
+      ErrorMessage = 'Value in "udRange0to100" must be between 0 and 100'
+      MinimumValue = 0
+      MaximumValue = 100
+    end
+  end
+  object JvErrorIndicator1: TJvErrorIndicator
+    ImageIndex = 0
+    DefaultUseAnchors = False
+    left = 408
+    top = 80
+  end
+  object JvValidationSummary1: TJvValidationSummary
+    OnChange = JvValidationSummary1Change
+    left = 408
+    top = 136
+  end
+end

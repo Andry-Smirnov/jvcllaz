@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectGroup FileVersion="2">
+    <Targets>
+      <Target FileName="jvcorelazr.lpk"/>
+      <Target FileName="jvcorelazd.lpk"/>
+      <Target FileName="jvctrlslazr.lpk"/>
+      <Target FileName="jvctrlslazd.lpk"/>
+      <Target FileName="jvstdctrlslazr.lpk"/>
+      <Target FileName="jvstdctrlslazd.lpk"/>
+      <Target FileName="jvdblazr.lpk"/>
+      <Target FileName="jvdblazd.lpk"/>
+      <Target FileName="jvpagecompsr.lpk"/>
+      <Target FileName="jvpagecompsd.lpk"/>
+      <Target FileName="jvcustomlazr.lpk"/>
+      <Target FileName="jvcustomlazd.lpk"/>
+      <Target FileName="jvcmpr.lpk"/>
+      <Target FileName="jvcmpd.lpk"/>
+      <Target FileName="jvappfrmlazr.lpk"/>
+      <Target FileName="jvappfrmlazd.lpk"/>
+      <Target FileName="jvhmilazr.lpk"/>
+      <Target FileName="jvhmilazd.lpk"/>
+      <Target FileName="jvjanslazr.lpk"/>
+      <Target FileName="jvjanslazd.lpk"/>
+      <Target FileName="jvmmlazr.lpk"/>
+      <Target FileName="jvmmlazd.lpk"/>
+      <Target FileName="jvnetlazr.lpk"/>
+      <Target FileName="jvnetlazd.lpk"/>
+      <Target FileName="jvruntimedesignlazr.lpk"/>
+      <Target FileName="jvruntimedesignlazd.lpk"/>
+      <Target FileName="jvvalidatorslazr.lpk"/>
+      <Target FileName="jvvalidatorslazd.lpk"/>
+      <Target FileName="jvwizardlazr.lpk"/>
+      <Target FileName="jvwizardlazd.lpk"/>
+      <Target FileName="jvxpctrlslazr.lpk"/>
+      <Target FileName="jvxpctrlslazd.lpk"/>
+      <Target FileName="jvtimeframeworklazr.lpk"/>
+      <Target FileName="jvtimeframeworklazd.lpk"/>
+      <Target FileName="jvpascalinterpreterr.lpk"/>
+      <Target FileName="jvpascalinterpreterd.lpk"/>
+    </Targets>
+  </ProjectGroup>
+</CONFIG>

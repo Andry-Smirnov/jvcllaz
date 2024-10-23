@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvMMLazR"/>
+    <Author Value="Various authors - see header of each unit for original author."/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="..\resource"/>
+        <OtherUnitFiles Value="..\run\JvMM"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvMM"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="JVCL Multimedia and image components (runtime package): bmp animator, id3v1 and id3v2 tags,  full color components and dialogs, gradient, gradient header, special progress bar, animated image"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="19">
+      <Item1>
+        <Filename Value="..\run\JvMM\jvspecialprogress.pas"/>
+        <UnitName Value="JvSpecialProgress"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\run\JvMM\jvgradient.pas"/>
+        <UnitName Value="JvGradient"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\run\JvMM\jvgradientheaderpanel.pas"/>
+        <UnitName Value="JvGradientHeaderPanel"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\run\JvMM\jvid3v1.pas"/>
+        <UnitName Value="JvId3v1"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\run\JvMM\jvid3v2types.pas"/>
+        <UnitName Value="JvId3v2Types"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\run\JvMM\jvid3v2base.pas"/>
+        <UnitName Value="JvId3v2Base"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\run\JvMM\jvid3v2.pas"/>
+        <UnitName Value="JvId3v2"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\run\JvMM\jvbmpanimator.pas"/>
+        <UnitName Value="JvBmpAnimator"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\run\JvMM\jvfullcolorspaces.pas"/>
+        <UnitName Value="JvFullColorSpaces"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\run\JvMM\jvfullcolorrotate.pas"/>
+        <UnitName Value="JvFullColorRotate"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\run\JvMM\jvfullcolorctrls.pas"/>
+        <UnitName Value="JvFullColorCtrls"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\run\JvMM\jvfullcolorform.lfm"/>
+        <Type Value="LFM"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\run\JvMM\jvfullcolorform.pas"/>
+        <UnitName Value="JvFullColorForm"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\run\JvMM\jvfullcolorcircleform.pas"/>
+        <UnitName Value="JvFullColorCircleForm"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\run\JvMM\jvfullcolordialogs.pas"/>
+        <UnitName Value="JvFullColorDialogs"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\run\JvMM\jvanimatedimage.pas"/>
+        <UnitName Value="JvAnimatedImage"/>
+      </Item16>
+      <Item17>
+        <Filename Value="..\run\JvMM\jvpicclip.pas"/>
+        <UnitName Value="JvPicClip"/>
+      </Item17>
+      <Item18>
+        <Filename Value="..\run\JvMM\jvspecialimage.pas"/>
+        <UnitName Value="JvSpecialImage"/>
+      </Item18>
+      <Item19>
+        <Filename Value="..\run\JvMM\jvimagetransform.pas"/>
+        <UnitName Value="JvImageTransform"/>
+      </Item19>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="JvCoreLazR"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvCoreLazD"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Initial Lazarus port by Sergio Samayoa"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="..\resource"/>
+        <OtherUnitFiles Value="..\design\JvCore"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\design\JvCore"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="JVCL Core Components (designtime package). Must be compiled before any of the other JvXXX packages can be installed."/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="4">
+      <Item1>
+        <Filename Value="..\design\JvCore\jvcorereg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="JvCoreReg"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\design\JvCore\jvdsgnconsts.pas"/>
+        <UnitName Value="JvDsgnConsts"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\design\JvCore\jvstringsform.pas"/>
+        <UnitName Value="JvStringsForm"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\design\JvCore\jvdsgneditors.pas"/>
+        <UnitName Value="JvDsgnEditors"/>
+      </Item4>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="IDEIntf"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="JvCoreLazR"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

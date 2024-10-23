@@ -1,0 +1,328 @@
+object SettingsForm: TSettingsForm
+  Left = 548
+  Height = 299
+  Top = 283
+  Width = 403
+  AutoSize = True
+  Caption = 'Settings'
+  ClientHeight = 299
+  ClientWidth = 403
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.1.0.0'
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 259
+    Width = 391
+    BorderSpacing.Top = 4
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    OKButton.OnClick = OKButtonClick
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 249
+    Top = 0
+    Width = 403
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 249
+    ClientWidth = 403
+    TabOrder = 1
+    object Bevel1: TBevel
+      AnchorSideTop.Control = edPrimeTimeStart
+      AnchorSideBottom.Control = edPrimeTimeEnd
+      AnchorSideBottom.Side = asrBottom
+      Left = 288
+      Height = 50
+      Top = 104
+      Width = 37
+      Anchors = [akTop, akLeft, akBottom]
+      Shape = bsSpacer
+    end
+    object cbTimeFormat: TComboBox
+      AnchorSideLeft.Control = StartDatePanel
+      AnchorSideTop.Control = Bevel3
+      AnchorSideTop.Side = asrBottom
+      Left = 134
+      Height = 23
+      Top = 50
+      Width = 124
+      BorderSpacing.Top = 8
+      ItemHeight = 15
+      ItemIndex = 1
+      Items.Strings = (
+        '24 hours'
+        '12 hours am/pm'
+      )
+      Style = csDropDownList
+      TabOrder = 0
+      Text = '12 hours am/pm'
+    end
+    object lblTimeFormat: TLabel
+      AnchorSideTop.Control = cbTimeFormat
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = cbTimeFormat
+      Left = 61
+      Height = 15
+      Top = 54
+      Width = 65
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 8
+      Caption = 'Time format'
+      FocusControl = cbTimeFormat
+      ParentColor = False
+    end
+    object lblFirstDayOfWeek: TLabel
+      AnchorSideTop.Control = cbFirstDayOfWeek
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = lblTimeFormat
+      AnchorSideRight.Side = asrBottom
+      Left = 38
+      Height = 15
+      Top = 81
+      Width = 88
+      Anchors = [akTop, akRight]
+      BorderSpacing.Left = 36
+      Caption = 'First day of week'
+      FocusControl = cbFirstDayOfWeek
+      ParentColor = False
+    end
+    object cbFirstDayOfWeek: TComboBox
+      AnchorSideLeft.Control = cbTimeFormat
+      AnchorSideTop.Control = cbTimeFormat
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = cbTimeFormat
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 23
+      Top = 77
+      Width = 124
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 4
+      ItemHeight = 15
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object edPrimeTimeStart: TTimeEdit
+      AnchorSideLeft.Control = cbTimeFormat
+      AnchorSideTop.Control = cbFirstDayOfWeek
+      AnchorSideTop.Side = asrBottom
+      Left = 134
+      Height = 23
+      Top = 104
+      Width = 103
+      ButtonWidth = 23
+      BorderSpacing.Top = 4
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 2
+      Text = 'edPrimeTimeStart'
+    end
+    object edPrimeTimeEnd: TTimeEdit
+      AnchorSideLeft.Control = cbTimeFormat
+      AnchorSideTop.Control = edPrimeTimeStart
+      AnchorSideTop.Side = asrBottom
+      Left = 134
+      Height = 23
+      Top = 131
+      Width = 103
+      ButtonWidth = 23
+      BorderSpacing.Top = 4
+      NumGlyphs = 1
+      MaxLength = 0
+      TabOrder = 3
+      Text = 'edPrimeTimeEnd'
+    end
+    object lblPrimeTimeStart: TLabel
+      AnchorSideTop.Control = edPrimeTimeStart
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = lblTimeFormat
+      AnchorSideRight.Side = asrBottom
+      Left = 42
+      Height = 15
+      Top = 108
+      Width = 84
+      Anchors = [akTop, akRight]
+      Caption = 'Prime time start'
+      ParentColor = False
+    end
+    object lblPrimeTimeEnd: TLabel
+      AnchorSideTop.Control = edPrimeTimeEnd
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = lblTimeFormat
+      AnchorSideRight.Side = asrBottom
+      Left = 45
+      Height = 15
+      Top = 135
+      Width = 81
+      Anchors = [akTop, akRight]
+      Caption = 'Prime time end'
+      ParentColor = False
+    end
+    object clbPrimeTimeColor: TColorButton
+      AnchorSideLeft.Control = edPrimeTimeStart
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Bevel1
+      AnchorSideTop.Side = asrCenter
+      Left = 241
+      Height = 25
+      Top = 117
+      Width = 104
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 36
+      BorderWidth = 2
+      ButtonColorAutoSize = False
+      ButtonColorSize = 16
+      ButtonColor = clBlack
+      Caption = 'Prime time'
+      Margin = 4
+    end
+    object Bevel2: TBevel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = edPrimeTimeEnd
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 3
+      Top = 162
+      Width = 387
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      Shape = bsTopLine
+    end
+    object cbIconSet: TComboBox
+      AnchorSideLeft.Control = edPrimeTimeEnd
+      AnchorSideTop.Control = Bevel2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = cbTimeFormat
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 23
+      Top = 171
+      Width = 124
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 6
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Color'
+        'Stroke style'
+      )
+      Style = csDropDownList
+      TabOrder = 4
+      Text = 'Color'
+    end
+    object lblIconSet: TLabel
+      AnchorSideTop.Control = cbIconSet
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = lblTimeFormat
+      AnchorSideRight.Side = asrBottom
+      Left = 85
+      Height = 15
+      Top = 175
+      Width = 41
+      Anchors = [akTop, akRight]
+      Caption = 'Icon set'
+      ParentColor = False
+    end
+    object Label1: TLabel
+      AnchorSideTop.Control = StartDatePanel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = StartDatePanel
+      Left = 75
+      Height = 15
+      Top = 12
+      Width = 50
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 9
+      Caption = 'Start date'
+      ParentColor = False
+    end
+    object StartDatePanel: TPanel
+      AnchorSideTop.Control = Panel1
+      Left = 134
+      Height = 23
+      Top = 8
+      Width = 216
+      AutoSize = True
+      BorderSpacing.Top = 8
+      BevelOuter = bvNone
+      ClientHeight = 23
+      ClientWidth = 216
+      TabOrder = 5
+      object rbStartToday: TRadioButton
+        AnchorSideLeft.Control = StartDatePanel
+        AnchorSideTop.Control = deStartDate
+        AnchorSideTop.Side = asrCenter
+        Left = 0
+        Height = 19
+        Top = 2
+        Width = 52
+        Caption = 'Today'
+        Checked = True
+        TabOrder = 2
+        TabStop = True
+      end
+      object rbStartDate: TRadioButton
+        AnchorSideLeft.Control = rbStartToday
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = deStartDate
+        AnchorSideTop.Side = asrCenter
+        Left = 60
+        Height = 19
+        Top = 2
+        Width = 20
+        BorderSpacing.Left = 8
+        TabOrder = 0
+      end
+      object deStartDate: TDateEdit
+        AnchorSideLeft.Control = rbStartDate
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = StartDatePanel
+        Left = 80
+        Height = 23
+        Top = 0
+        Width = 136
+        CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+        OnAcceptDate = deStartDateAcceptDate
+        DefaultToday = True
+        DateOrder = doNone
+        ButtonWidth = 23
+        NumGlyphs = 1
+        MaxLength = 0
+        TabOrder = 1
+      end
+    end
+    object Bevel3: TBevel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = StartDatePanel
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 8
+      Height = 3
+      Top = 39
+      Width = 387
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 8
+      Shape = bsTopLine
+    end
+  end
+end

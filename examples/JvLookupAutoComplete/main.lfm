@@ -1,0 +1,140 @@
+object Form1: TForm1
+  Left = 326
+  Height = 398
+  Top = 128
+  Width = 418
+  AutoSize = True
+  Caption = 'JvLookupAutoComplete demo'
+  ClientHeight = 398
+  ClientWidth = 418
+  OnCreate = FormCreate
+  LCLVersion = '2.1.0.0'
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 50
+    Width = 176
+    BorderSpacing.Top = 4
+    TabOrder = 0
+  end
+  object ListBox1: TListBox
+    AnchorSideLeft.Control = Edit1
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Edit1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Side = asrBottom
+    Left = 16
+    Height = 281
+    Top = 81
+    Width = 176
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 16
+    Constraints.MinHeight = 250
+    Items.Strings = (
+      'ListBox'
+      'ComboBox'
+      'Edit'
+      'ListView'
+      'TreeView'
+      'ScrollBar'
+      'ScrollBox'
+      'StatusBar'
+      'ToolBar'
+      'Menu'
+      'PopupMenu'
+      'Button'
+      'BitBtn'
+      'SpeedButton'
+    )
+    ItemHeight = 15
+    Options = []
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label4
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 31
+    Width = 66
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 4
+    Caption = 'listbox items'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Edit1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Label1
+    Left = 208
+    Height = 15
+    Top = 31
+    Width = 77
+    BorderSpacing.Left = 16
+    Caption = 'stringlist items'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideTop.Control = Edit1
+    Left = 208
+    Height = 23
+    Top = 50
+    Width = 168
+    BorderSpacing.Right = 16
+    TabOrder = 2
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Edit2
+    AnchorSideTop.Control = ListBox1
+    AnchorSideRight.Control = Edit2
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = ListBox1
+    AnchorSideBottom.Side = asrBottom
+    Left = 208
+    Height = 281
+    Top = 81
+    Width = 168
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = False
+    Caption = 'Type listbox items into the edit controls and see autocompletion.'
+    Layout = tlCenter
+    ParentColor = False
+    WordWrap = True
+  end
+  object Label4: TLabel
+    AnchorSideLeft.Control = Edit1
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Edit2
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 12
+    Width = 360
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 12
+    Caption = 'Autocompletion based on...'
+    ParentColor = False
+  end
+  object JvLookupAutoComplete1: TJvLookupAutoComplete
+    Edit = Edit1
+    ListBox = ListBox1
+    left = 80
+    top = 304
+  end
+  object JvLookupAutoComplete2: TJvLookupAutoComplete
+    Edit = Edit2
+    Kind = akStrings
+    left = 272
+    top = 304
+  end
+end

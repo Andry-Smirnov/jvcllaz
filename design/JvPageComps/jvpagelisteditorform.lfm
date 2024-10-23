@@ -1,0 +1,148 @@
+object frmPageListEditor: TfrmPageListEditor
+  Left = 446
+  Height = 342
+  Top = 114
+  Width = 233
+  Caption = 'PageList Editor'
+  ClientHeight = 342
+  ClientWidth = 233
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '2.1.0.0'
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 23
+    Top = 0
+    Width = 233
+    AutoSize = True
+    ButtonHeight = 23
+    ButtonWidth = 23
+    Caption = 'ToolBar1'
+    EdgeInner = esNone
+    EdgeOuter = esNone
+    Images = ilButtons
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object btnAdd: TToolButton
+      Left = 1
+      Hint = 'Add page'
+      Top = 0
+      Action = acAdd
+    end
+    object btnDelete: TToolButton
+      Left = 24
+      Hint = 'Delete page'
+      Top = 0
+      Action = acDelete
+    end
+    object ToolButton1: TToolButton
+      Left = 47
+      Height = 23
+      Top = 0
+      Caption = 'ToolButton1'
+      ImageIndex = 3
+      Style = tbsSeparator
+    end
+    object tbMoveUp: TToolButton
+      Left = 55
+      Top = 0
+      Action = acMoveUp
+    end
+    object tbMoveDown: TToolButton
+      Left = 78
+      Top = 0
+      Action = acMoveDown
+    end
+  end
+  object lbPages: TListBox
+    Left = 0
+    Height = 296
+    Top = 23
+    Width = 233
+    Align = alClient
+    ItemHeight = 0
+    OnClick = lbPagesClick
+    OnKeyPress = lbPagesKeyPress
+    PopupMenu = popEditor
+    TabOrder = 1
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 319
+    Width = 233
+    Panels = <>
+  end
+  object alEditor: TActionList
+    Images = ilButtons
+    OnUpdate = alEditorUpdate
+    Left = 86
+    Top = 34
+    object acAdd: TAction
+      Caption = 'Add'
+      Hint = 'Add Welcome page'
+      ImageIndex = 0
+      OnExecute = acAddExecute
+      ShortCut = 45
+    end
+    object acDelete: TAction
+      Caption = 'Delete'
+      Hint = 'Delete selected page(s)'
+      ImageIndex = 1
+      OnExecute = acDeleteExecute
+      OnUpdate = acDeleteUpdate
+      ShortCut = 46
+    end
+    object acMoveUp: TAction
+      Caption = 'Move Up'
+      Hint = 'Move Up'
+      ImageIndex = 2
+      OnExecute = acMoveUpExecute
+      ShortCut = 16422
+    end
+    object acMoveDown: TAction
+      Caption = 'Move Down'
+      Hint = 'Move Down'
+      ImageIndex = 3
+      OnExecute = acMoveDownExecute
+      ShortCut = 16424
+    end
+  end
+  object ilButtons: TImageList
+    Left = 20
+    Top = 30
+    Bitmap = {
+      4C7A040000001000000010000000FE0000000000000078DAED558B0E833008E4
+      E3FB6DFE56679DD42BC5963E96749B24448DDC1D6041A2CB9C733E18B518C407
+      7CF65C31C4A0BEE4B270C8AB31FD04E3CF7BF41076E384718C65CEE275C7737F
+      102B73A11B0EC6C75A85367294F4F9DE2BBA167D6EA3A55EE988AFF58C35B66D
+      53F1167DC67A257F933EC465FA1D8EF321CF9CD569590BB9F5E6D88295B16DBA
+      EFB8D42B339FCCBFC6D133FF3207CB79546B3EDE1938707F0036EE0172C55D76
+      E99F2E62E2BBEAFC3B3F32FFF15B3DF3FF8B3652DFDE9F744E5BB1EC8D1C09B6
+      9143C51A39C4D9CA70D9DEFA50FD4BE03B6A7E6CADB91FF97EDF787E67CCEFC8
+      FE98B1BF66F56F747FCFF87FFC85BD007F143BD9
+    }
+  end
+  object popEditor: TPopupMenu
+    Images = ilButtons
+    Left = 54
+    Top = 120
+    object Add1: TMenuItem
+      Action = acAdd
+    end
+    object Delete1: TMenuItem
+      Action = acDelete
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object MoveUp1: TMenuItem
+      Action = acMoveUp
+    end
+    object MoveDown1: TMenuItem
+      Action = acMoveDown
+    end
+  end
+end

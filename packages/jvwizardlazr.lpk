@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvWizardLazR"/>
+    <Author Value="Various authors - see header of jvwizard.pas for original authors. Lazarus port by Michal Gawrycki."/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\run\JvWizard"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvWizard"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="&quot;Wizard&quot; component (Runtime package)"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="5">
+      <Item1>
+        <Filename Value="..\run\JvWizard\jvwizard.pas"/>
+        <UnitName Value="JvWizard"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\run\JvWizard\jvwizardcommon.pas"/>
+        <UnitName Value="JvWizardCommon"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\run\JvWizard\jvwizardroutemaplist.pas"/>
+        <UnitName Value="JvWizardRouteMapList"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\run\JvWizard\jvwizardroutemapnodes.pas"/>
+        <UnitName Value="JvWizardRouteMapNodes"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\run\JvWizard\jvwizardroutemapsteps.pas"/>
+        <UnitName Value="JvWizardRouteMapSteps"/>
+      </Item5>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="JvCoreLazR"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

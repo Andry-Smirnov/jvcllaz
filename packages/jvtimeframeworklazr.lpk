@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvTimeFrameworkLazR"/>
+    <Author Value="Original author: Mike Kolter, Lazarus port by W.Pamler"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\run\JvTimeFramework"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvTimeFramework"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Runtime package of the JVCL &quot;time framework&quot; components: Planners, calendars, Gantt
+NOTE: NOT FULLY WORKING"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="10">
+      <Item1>
+        <Filename Value="..\run\JvTimeFramework\jvtfsparsematrix.pas"/>
+        <UnitName Value="JvTFSparseMatrix"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\run\JvTimeFramework\jvtfutils.pas"/>
+        <UnitName Value="JvTFUtils"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\run\JvTimeFramework\jvtfglance.pas"/>
+        <UnitName Value="JvTFGlance"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\run\JvTimeFramework\jvtfmanager.pas"/>
+        <UnitName Value="JvTFManager"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\run\JvTimeFramework\jvtfmonths.pas"/>
+        <UnitName Value="JvTFMonths"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\run\JvTimeFramework\jvtfweeks.pas"/>
+        <UnitName Value="JvTFWeeks"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\run\JvTimeFramework\jvtfdays.pas"/>
+        <UnitName Value="JvTFDays"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\run\JvTimeFramework\jvtfalarm.pas"/>
+        <UnitName Value="JvTFAlarm"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\run\JvTimeFramework\jvtfgantt.pas"/>
+        <UnitName Value="JvTFGantt"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\run\JvTimeFramework\jvtfglancetextviewer.pas"/>
+        <UnitName Value="JvTFGlanceTextViewer"/>
+      </Item10>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="1">
+      <Item1>
+        <PackageName Value="JvCoreLazR"/>
+      </Item1>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

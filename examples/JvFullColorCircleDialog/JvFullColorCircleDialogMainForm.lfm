@@ -1,0 +1,94 @@
+object JvFullColorCircleDlgMainFrm: TJvFullColorCircleDlgMainFrm
+  Left = 836
+  Height = 315
+  Top = 214
+  Width = 274
+  Caption = 'JvFullColorCircleDlgMainFrm'
+  ClientHeight = 315
+  ClientWidth = 274
+  Color = clBtnFace
+  Font.Color = clWindowText
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Bevel: TBevel
+    AnchorSideTop.Control = cmbFileName
+    AnchorSideTop.Side = asrBottom
+    Left = 32
+    Height = 86
+    Top = 41
+    Width = 86
+    BorderSpacing.Left = 9
+    BorderSpacing.Top = 12
+    Style = bsRaised
+  end
+  object Image: TImage
+    AnchorSideLeft.Control = Bevel
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Bevel
+    AnchorSideTop.Side = asrCenter
+    Left = 35
+    Height = 80
+    Top = 44
+    Width = 80
+    Center = True
+  end
+  object LabelImage: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = cmbFileName
+    AnchorSideTop.Side = asrCenter
+    Left = 6
+    Height = 15
+    Top = 10
+    Width = 39
+    BorderSpacing.Left = 6
+    Caption = 'Image :'
+    Font.Color = clWindowText
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object cmbFileName: TComboBox
+    AnchorSideLeft.Control = LabelImage
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 51
+    Height = 23
+    Top = 6
+    Width = 206
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    DropDownCount = 24
+    Font.Color = clWindowText
+    ItemHeight = 15
+    OnClick = cmbFileNameSelect
+    OnSelect = cmbFileNameSelect
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    AnchorSideTop.Control = Bevel
+    AnchorSideTop.Side = asrBottom
+    Left = 40
+    Height = 15
+    Top = 133
+    Width = 78
+    Alignment = taCenter
+    AutoSize = False
+    BorderSpacing.Top = 6
+    Caption = 'Original image'
+    ParentColor = False
+    WordWrap = True
+  end
+  object JvFullColorCircleDialog: TJvFullColorCircleDialog
+    HelpContext = 0
+    OnApply = JvFullColorCircleDialogApply
+    left = 184
+    top = 80
+  end
+end

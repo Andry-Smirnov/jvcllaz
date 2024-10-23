@@ -1,0 +1,418 @@
+object Form1: TForm1
+  Left = 361
+  Height = 292
+  Top = 225
+  Width = 559
+  AutoSize = True
+  Caption = 'JvOfficeColorPanel demo'
+  ClientHeight = 292
+  ClientWidth = 559
+  OnCreate = FormCreate
+  ShowHint = True
+  LCLVersion = '2.1.0.0'
+  object JvOfficeColorPanel1: TJvOfficeColorPanel
+    AnchorSideLeft.Control = gbColorView
+    AnchorSideTop.Control = gbColorView
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 162
+    Top = 117
+    Width = 152
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    BorderSpacing.Bottom = 6
+    FlatBorderColor = clHotLight
+    SelectedColor = clDefault
+    ColorDlgCustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    TabOrder = 0
+    Properties.NoneColorCaption = 'No Color'
+    Properties.DefaultColorCaption = 'Automatic'
+    Properties.CustomColorCaption = 'Other Colors...'
+    Properties.NoneColorHint = 'No Color'
+    Properties.DefaultColorHint = 'Automatic'
+    Properties.CustomColorHint = 'Other Colors...'
+    OnColorChange = JvOfficeColorPanel1ColorChange
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = JvOfficeColorPanel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 188
+    Height = 198
+    Top = 6
+    Width = 347
+    BorderSpacing.Left = 24
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 198
+    ClientWidth = 347
+    TabOrder = 1
+    object cbFlatBorder: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      Left = 0
+      Height = 19
+      Top = 0
+      Width = 77
+      Caption = 'Flat border'
+      OnChange = cbFlatBorderChange
+      TabOrder = 0
+    end
+    object cbDefaultColorColor: TColorButton
+      AnchorSideLeft.Control = cbShowDefaultColor
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbShowDefaultColor
+      AnchorSideTop.Side = asrCenter
+      Left = 127
+      Height = 25
+      Top = 43
+      Width = 33
+      BorderSpacing.Left = 8
+      BorderWidth = 2
+      ButtonColorSize = 16
+      ButtonColor = clBlack
+      Margin = 4
+      OnColorChanged = cbDefaultColorColorColorChanged
+    end
+    object cbShowCustomColor: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cbShowUserColor
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 19
+      Top = 103
+      Width = 122
+      Caption = 'Show custom color'
+      Checked = True
+      OnChange = cbShowCustomColorChange
+      State = cbChecked
+      TabOrder = 1
+    end
+    object cbShowDefaultColor: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cbShowNoneColor
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 19
+      Top = 46
+      Width = 119
+      Caption = 'Show default color'
+      Checked = True
+      OnChange = cbShowDefaultColorChange
+      State = cbChecked
+      TabOrder = 2
+    end
+    object cbShowNoneColor: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cbFlatBorder
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 19
+      Top = 27
+      Width = 110
+      BorderSpacing.Top = 8
+      Caption = 'Show NoneColor'
+      OnChange = cbShowNoneColorChange
+      TabOrder = 3
+    end
+    object cbShowSystemColors: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cbShowDefaultColor
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 19
+      Top = 65
+      Width = 124
+      Caption = 'Show system colors'
+      OnChange = cbShowSystemColorsChange
+      TabOrder = 4
+    end
+    object cbShowUserColor: TCheckBox
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cbShowSystemColors
+      AnchorSideTop.Side = asrBottom
+      Left = 0
+      Height = 19
+      Top = 84
+      Width = 104
+      Caption = 'Show user color'
+      OnChange = cbShowUserColorChange
+      TabOrder = 5
+    end
+    object seButtonHeight: TSpinEdit
+      AnchorSideLeft.Control = seColorSpaceBottom
+      AnchorSideTop.Control = Panel1
+      Left = 297
+      Height = 23
+      Top = 0
+      Width = 50
+      Alignment = taRightJustify
+      OnChange = seButtonHeightChange
+      TabOrder = 6
+      Value = 25
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seButtonHeight
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 4
+      Width = 73
+      BorderSpacing.Top = 16
+      Caption = 'Button height'
+      ParentColor = False
+    end
+    object lblColorSize: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seColorSize
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 29
+      Width = 51
+      BorderSpacing.Top = 16
+      Caption = 'Color size'
+      ParentColor = False
+    end
+    object seColorSize: TSpinEdit
+      AnchorSideLeft.Control = seColorSpaceBottom
+      AnchorSideTop.Control = seButtonHeight
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 25
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seColorSizeChange
+      TabOrder = 7
+      Value = 25
+    end
+    object lblColorSpace: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seColorSpace
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 54
+      Width = 62
+      BorderSpacing.Top = 16
+      Caption = 'Color space'
+      ParentColor = False
+    end
+    object seColorSpace: TSpinEdit
+      AnchorSideLeft.Control = seColorSpaceBottom
+      AnchorSideTop.Control = seColorSize
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 50
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seColorSpaceChange
+      TabOrder = 8
+      Value = 25
+    end
+    object lblColorSpaceTop: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seColorSpaceTop
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 79
+      Width = 83
+      BorderSpacing.Top = 16
+      Caption = 'Color space top'
+      ParentColor = False
+    end
+    object seColorSpaceTop: TSpinEdit
+      AnchorSideLeft.Control = seColorSpaceBottom
+      AnchorSideTop.Control = seColorSpace
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 75
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seColorSpaceTopChange
+      TabOrder = 9
+      Value = 25
+    end
+    object lblColorSpaceBottom: TLabel
+      AnchorSideLeft.Control = cbDefaultColorColor
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = seColorSpaceBottom
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 104
+      Width = 105
+      BorderSpacing.Left = 24
+      BorderSpacing.Top = 16
+      Caption = 'Color space bottom'
+      ParentColor = False
+    end
+    object seColorSpaceBottom: TSpinEdit
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = seColorSpaceTop
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 100
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 2
+      OnChange = seColorSpaceBottomChange
+      TabOrder = 10
+      Value = 25
+    end
+    object lblTopMargin: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seTopMargin
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 154
+      Width = 61
+      BorderSpacing.Top = 16
+      Caption = 'Top margin'
+      ParentColor = False
+    end
+    object seTopMargin: TSpinEdit
+      AnchorSideLeft.Control = seColorSpaceBottom
+      AnchorSideTop.Control = seHorizontalMargin
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 150
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seTopMarginChange
+      TabOrder = 11
+      Value = 25
+    end
+    object seBottomMargin: TSpinEdit
+      AnchorSideLeft.Control = seColorSpaceBottom
+      AnchorSideTop.Control = seTopMargin
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 175
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seBottomMarginChange
+      TabOrder = 12
+      Value = 25
+    end
+    object lblBottomMargin: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seBottomMargin
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 179
+      Width = 81
+      BorderSpacing.Top = 16
+      Caption = 'Bottom margin'
+      ParentColor = False
+    end
+    object lblColorSpaceBottom1: TLabel
+      AnchorSideLeft.Control = lblColorSpaceBottom
+      AnchorSideTop.Control = seHorizontalMargin
+      AnchorSideTop.Side = asrCenter
+      Left = 184
+      Height = 15
+      Top = 129
+      Width = 96
+      BorderSpacing.Top = 16
+      Caption = 'Horizontal margin'
+      ParentColor = False
+    end
+    object seHorizontalMargin: TSpinEdit
+      AnchorSideLeft.Control = seBottomMargin
+      AnchorSideTop.Control = seColorSpaceBottom
+      AnchorSideTop.Side = asrBottom
+      Left = 297
+      Height = 23
+      Top = 125
+      Width = 50
+      Alignment = taRightJustify
+      BorderSpacing.Top = 2
+      OnChange = seHorizontalMarginChange
+      TabOrder = 13
+      Value = 25
+    end
+    object cbBackColor: TColorButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = cbShowCustomColor
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = cbDefaultColorColor
+      AnchorSideRight.Side = asrBottom
+      Left = 0
+      Height = 25
+      Top = 130
+      Width = 160
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      BorderWidth = 2
+      ButtonColorAutoSize = False
+      ButtonColorSize = 16
+      ButtonColor = clBlack
+      Caption = 'Background color'
+      Margin = 4
+      OnColorChanged = cbBackColorColorChanged
+    end
+  end
+  object gbColorView: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 6
+    Height = 105
+    Top = 6
+    Width = 152
+    BorderSpacing.Around = 6
+    Caption = 'Selected:'
+    ClientHeight = 85
+    ClientWidth = 148
+    TabOrder = 2
+    object shColorView: TShape
+      Left = 8
+      Height = 73
+      Top = 4
+      Width = 132
+      Align = alClient
+      BorderSpacing.Left = 8
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+    end
+  end
+end

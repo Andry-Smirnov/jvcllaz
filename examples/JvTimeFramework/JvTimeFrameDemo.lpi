@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="JvTimeFrameDemo"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages Count="6">
+      <Item1>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="DateTimeCtrls"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="SQLDBLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="JvTimeFrameworkLazR"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="LCL"/>
+      </Item6>
+    </RequiredPackages>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="JvTimeFrameDemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="tfmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfMain"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="tfvisibleresources.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VisibleResources"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfVisibleResources"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="tfshare.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Share"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfShare"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="tfapptedit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ApptEdit"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfApptEdit"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="tfprintprogress.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="PrintProgress"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfPrintProgress"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="tfsettings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SettingsForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfSettings"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="tfalarm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AlarmForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="tfAlarm"/>
+      </Unit7>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="../../bin/$(TargetCPU)-$(TargetOS)/JvTimeFrameDemo"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

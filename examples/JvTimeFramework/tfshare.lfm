@@ -1,0 +1,45 @@
+object Share: TShare
+  Left = 672
+  Height = 216
+  Top = 110
+  Width = 250
+  AutoSize = True
+  Caption = 'Share'
+  ClientHeight = 216
+  ClientWidth = 250
+  Color = clBtnFace
+  Constraints.MinWidth = 250
+  Font.Color = clWindowText
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object ResourcesCheckList: TCheckListBox
+    Left = 8
+    Height = 160
+    Top = 8
+    Width = 234
+    Align = alClient
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Around = 8
+    Constraints.MinHeight = 140
+    ItemHeight = 0
+    TabOrder = 0
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 176
+    Width = 238
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 1
+    ShowButtons = [pbOK, pbCancel]
+  end
+end

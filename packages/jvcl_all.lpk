@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="jvcl_all"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\design\JvAll"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="A meta package for simple installation of all JVCL designtime packages."/>
+    <Version Major="1" Release="8"/>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="18">
+      <Item1>
+        <PackageName Value="JvPascalInterpreterD"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="JvTimeFrameworkLazD"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="JvXPCtrlsLazD"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="JvWizardLazD"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="JvValidatorsLazD"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="JvRuntimeDesignLazD"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="JvPageCompsD"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="JvNetLazD"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="JvMMLazD"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="JvJansLazD"/>
+      </Item10>
+      <Item11>
+        <PackageName Value="JvStdCtrlsLazD"/>
+      </Item11>
+      <Item12>
+        <PackageName Value="JvHMILazD"/>
+      </Item12>
+      <Item13>
+        <PackageName Value="JvDBLazD"/>
+      </Item13>
+      <Item14>
+        <PackageName Value="JvCustomLazD"/>
+      </Item14>
+      <Item15>
+        <PackageName Value="JvCtrlsLazD"/>
+      </Item15>
+      <Item16>
+        <PackageName Value="JvAppFrmLazD"/>
+      </Item16>
+      <Item17>
+        <PackageName Value="JvCmpD"/>
+      </Item17>
+      <Item18>
+        <PackageName Value="JvCoreLazD"/>
+      </Item18>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

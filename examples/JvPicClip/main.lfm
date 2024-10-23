@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 326
+  Height = 213
+  Top = 127
+  Width = 320
+  AutoSize = True
+  Caption = 'JvPicClip demo'
+  ClientHeight = 213
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object CombinedImage: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 32
+    Height = 90
+    Top = 32
+    Width = 267
+    BorderSpacing.Left = 32
+    BorderSpacing.Top = 32
+    BorderSpacing.Right = 32
+    BorderSpacing.Bottom = 16
+    OnMouseDown = CombinedImageMouseDown
+  end
+  object SplitImage: TImage
+    AnchorSideLeft.Control = CombinedImage
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Trackbar
+    AnchorSideTop.Side = asrBottom
+    Left = 153
+    Height = 24
+    Top = 179
+    Width = 24
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 32
+  end
+  object Trackbar: TTrackBar
+    AnchorSideLeft.Control = CombinedImage
+    AnchorSideTop.Control = CombinedImage
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = CombinedImage
+    AnchorSideRight.Side = asrBottom
+    Left = 32
+    Height = 33
+    Top = 138
+    Width = 267
+    OnChange = TrackbarChange
+    PageSize = 0
+    Position = 0
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    AnchorSideTop.Control = SplitImage
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = SplitImage
+    Left = 103
+    Height = 15
+    Top = 184
+    Width = 34
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 16
+    Caption = 'Label1'
+    ParentColor = False
+  end
+  object JvPicClip1: TJvPicClip
+    Left = 96
+    Top = 32
+  end
+end

@@ -1,0 +1,280 @@
+object frmSpellChecker: TfrmSpellChecker
+  Left = 338
+  Height = 406
+  Top = 177
+  Width = 457
+  AutoSize = True
+  BorderStyle = bsDialog
+  Caption = 'Spell check document'
+  ClientHeight = 406
+  ClientWidth = 457
+  Color = clBtnFace
+  DefaultMonitor = dmDesktop
+  Font.Color = clWindowText
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.1.0.0'
+  Scaled = False
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 16
+    Height = 15
+    Top = 12
+    Width = 81
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 12
+    Caption = 'Not in wordlist:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = edNewWord
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 112
+    Width = 67
+    BorderSpacing.Top = 8
+    Caption = 'Suggestions:'
+    ParentColor = False
+  end
+  object lblNoSuggestions: TLabel
+    AnchorSideTop.Control = Label2
+    AnchorSideRight.Control = edNewWord
+    AnchorSideRight.Side = asrBottom
+    Left = 232
+    Height = 15
+    Top = 112
+    Width = 104
+    Anchors = [akTop, akRight]
+    Caption = '(nothing to display)'
+    ParentColor = False
+    Visible = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = edBadWord
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 15
+    Top = 62
+    Width = 70
+    BorderSpacing.Top = 8
+    Caption = 'Replace with:'
+    ParentColor = False
+  end
+  object edNewWord: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = edBadWord
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 81
+    Width = 320
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    TabOrder = 1
+  end
+  object lbSuggestions: TListBox
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = edBadWord
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 141
+    Top = 131
+    Width = 320
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    ItemHeight = 0
+    OnClick = lbSuggestionsClick
+    TabOrder = 2
+  end
+  object btnIgnore: TButton
+    AnchorSideLeft.Control = btnIgnoreAll
+    AnchorSideTop.Control = edBadWord
+    AnchorSideRight.Control = btnIgnoreAll
+    AnchorSideRight.Side = asrBottom
+    Left = 352
+    Height = 25
+    Top = 31
+    Width = 77
+    Action = acIgnore
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    TabOrder = 3
+  end
+  object btnIgnoreAll: TButton
+    AnchorSideLeft.Control = edBadWord
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = btnIgnore
+    AnchorSideTop.Side = asrBottom
+    Left = 352
+    Height = 25
+    Top = 64
+    Width = 77
+    Action = acIgnoreAll
+    AutoSize = True
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 16
+    TabOrder = 4
+  end
+  object btnChange: TButton
+    AnchorSideLeft.Control = btnIgnoreAll
+    AnchorSideTop.Control = lbSuggestions
+    AnchorSideRight.Control = btnIgnoreAll
+    AnchorSideRight.Side = asrBottom
+    Left = 352
+    Height = 25
+    Top = 131
+    Width = 77
+    Action = acChange
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    TabOrder = 5
+  end
+  object btnClose: TButton
+    AnchorSideLeft.Control = btnIgnoreAll
+    AnchorSideRight.Control = btnIgnoreAll
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = GroupBox1
+    AnchorSideBottom.Side = asrBottom
+    Left = 352
+    Height = 25
+    Top = 363
+    Width = 77
+    Action = acClose
+    Anchors = [akLeft, akRight, akBottom]
+    AutoSize = True
+    Cancel = True
+    TabOrder = 8
+  end
+  object btnAdd: TButton
+    AnchorSideLeft.Control = btnIgnoreAll
+    AnchorSideTop.Control = btnChange
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = btnIgnoreAll
+    AnchorSideRight.Side = asrBottom
+    Left = 352
+    Height = 25
+    Top = 164
+    Width = 77
+    Action = acAdd
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 8
+    TabOrder = 6
+  end
+  object GroupBox1: TGroupBox
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = lbSuggestions
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = lblNoSuggestions
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 108
+    Top = 280
+    Width = 320
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 16
+    Caption = ' Ignore: '
+    ClientHeight = 88
+    ClientWidth = 316
+    TabOrder = 7
+    object chkUpperCase: TCheckBox
+      AnchorSideLeft.Control = GroupBox1
+      AnchorSideTop.Control = GroupBox1
+      Left = 24
+      Height = 19
+      Top = 4
+      Width = 118
+      BorderSpacing.Left = 24
+      BorderSpacing.Top = 4
+      Caption = '&UPPERCASE words'
+      TabOrder = 0
+    end
+    object chkNumber: TCheckBox
+      AnchorSideLeft.Control = chkUpperCase
+      AnchorSideTop.Control = chkUpperCase
+      AnchorSideTop.Side = asrBottom
+      Left = 24
+      Height = 19
+      Top = 23
+      Width = 130
+      Caption = 'Words with &numbers'
+      TabOrder = 1
+    end
+    object chkURL: TCheckBox
+      AnchorSideLeft.Control = chkUpperCase
+      AnchorSideTop.Control = chkNumber
+      AnchorSideTop.Side = asrBottom
+      Left = 24
+      Height = 19
+      Top = 42
+      Width = 135
+      Caption = 'Internet and file &paths'
+      TabOrder = 2
+    end
+    object chkHTML: TCheckBox
+      AnchorSideLeft.Control = chkUpperCase
+      AnchorSideTop.Control = chkURL
+      AnchorSideTop.Side = asrBottom
+      Left = 24
+      Height = 19
+      Top = 61
+      Width = 82
+      BorderSpacing.Bottom = 8
+      Caption = 'HT&ML code'
+      TabOrder = 3
+    end
+  end
+  object edBadWord: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 31
+    Width = 320
+    BorderSpacing.Top = 4
+    Color = clBtnFace
+    Constraints.MinWidth = 320
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object alSpell: TActionList
+    OnUpdate = alSpellUpdate
+    Left = 112
+    Top = 144
+    object acIgnore: TAction
+      Caption = '&Ignore'
+      OnExecute = acIgnoreExecute
+    end
+    object acIgnoreAll: TAction
+      Caption = 'Ignore &All'
+      OnExecute = acIgnoreAllExecute
+    end
+    object acChange: TAction
+      Caption = 'C&hange'
+      OnExecute = acChangeExecute
+    end
+    object acAdd: TAction
+      Caption = 'A&dd'
+      OnExecute = acAddExecute
+    end
+    object acClose: TAction
+      Caption = '&Close'
+      OnExecute = acCloseExecute
+      ShortCut = 27
+    end
+  end
+end

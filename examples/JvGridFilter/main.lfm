@@ -1,0 +1,343 @@
+object Form1: TForm1
+  Left = 340
+  Height = 552
+  Top = 127
+  Width = 569
+  Caption = 'JvGridFilter Demo'
+  ClientHeight = 552
+  ClientWidth = 569
+  LCLVersion = '2.3.0.0'
+  object StringGrid: TStringGrid
+    AnchorSideLeft.Control = Label2
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = edFilter
+    Left = 8
+    Height = 467
+    Top = 46
+    Width = 553
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    BorderSpacing.Bottom = 8
+    ColCount = 4
+    DefaultColWidth = 200
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goSmoothScroll, goFixedRowNumbering]
+    RowCount = 25
+    TabOrder = 0
+    ColWidths = (
+      44
+      136
+      157
+      200
+    )
+    Cells = (
+      75
+      1
+      0
+      'First name'
+      1
+      1
+      'Abraham'
+      1
+      2
+      'Al'
+      1
+      3
+      'Albert'
+      1
+      4
+      'Alfred'
+      1
+      5
+      'Angelina'
+      1
+      6
+      'Audrey'
+      1
+      7
+      'Babe'
+      1
+      8
+      'Benjamin'
+      1
+      9
+      'Bill'
+      1
+      10
+      'Brad'
+      1
+      11
+      'C.S.'
+      1
+      12
+      'Charles'
+      1
+      13
+      'Cristiano'
+      1
+      14
+      'David'
+      1
+      15
+      'Elvis'
+      1
+      16
+      'Ernest'
+      1
+      17
+      'Franklin D.'
+      1
+      18
+      'Galileo'
+      1
+      19
+      'J.R.R.'
+      1
+      20
+      'JK'
+      1
+      21
+      'John F.'
+      1
+      22
+      'John'
+      1
+      23
+      'Ludwig Van'
+      1
+      24
+      'Mark'
+      2
+      0
+      'Last name'
+      2
+      1
+      'Lincoln'
+      2
+      2
+      'Gore'
+      2
+      3
+      'Einstein'
+      2
+      4
+      'Hitchcock'
+      2
+      5
+      'Jolie'
+      2
+      6
+      'Hepburn'
+      2
+      7
+      'Ruth'
+      2
+      8
+      'Franklin'
+      2
+      9
+      'Gates'
+      2
+      10
+      'Pitt'
+      2
+      11
+      'Lewis'
+      2
+      12
+      'Darwin'
+      2
+      13
+      'Ronaldo'
+      2
+      14
+      'Cameron'
+      2
+      15
+      'Presley'
+      2
+      16
+      'Hemingway'
+      2
+      17
+      'Roosevelt'
+      2
+      18
+      'Galilei'
+      2
+      19
+      'Tolkien'
+      2
+      20
+      'Rowling'
+      2
+      21
+      'Kennedy'
+      2
+      22
+      'Lennon'
+      2
+      23
+      'Beethoven'
+      2
+      24
+      'Zuckerberg'
+      3
+      0
+      'Business'
+      3
+      1
+      'Politics'
+      3
+      2
+      'Politics'
+      3
+      3
+      'Science'
+      3
+      4
+      'Movie'
+      3
+      5
+      'Movie'
+      3
+      6
+      'Movie'
+      3
+      7
+      'Sports'
+      3
+      8
+      'Science'
+      3
+      9
+      'Computer'
+      3
+      10
+      'Movie'
+      3
+      11
+      'Literature'
+      3
+      12
+      'Science'
+      3
+      13
+      'Sports'
+      3
+      14
+      'Politics'
+      3
+      15
+      'Music'
+      3
+      16
+      'Literature'
+      3
+      17
+      'Politics'
+      3
+      18
+      'Science'
+      3
+      19
+      'Literature'
+      3
+      20
+      'Literature'
+      3
+      21
+      'Politics'
+      3
+      22
+      'Music'
+      3
+      23
+      'Music'
+      3
+      24
+      'Computer'
+    )
+  end
+  object lblSomeFamousPeople: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 117
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    Caption = 'Some famous people'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = lblSomeFamousPeople
+    AnchorSideTop.Control = lblSomeFamousPeople
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 15
+    Top = 23
+    Width = 277
+    Caption = 'https://www.listchallenges.com/100-famous-people'
+    ParentColor = False
+  end
+  object lblFilter: TLabel
+    AnchorSideLeft.Control = StringGrid
+    AnchorSideTop.Control = edFilter
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 15
+    Top = 525
+    Width = 29
+    Caption = 'Filter:'
+    ParentColor = False
+  end
+  object edFilter: TEdit
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 48
+    Height = 23
+    Top = 521
+    Width = 264
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Bottom = 8
+    TabOrder = 1
+    Text = '[Business] = "Music"'
+  end
+  object btnFilter: TButton
+    AnchorSideTop.Side = asrCenter
+    Left = 320
+    Height = 25
+    Top = 519
+    Width = 94
+    AutoSize = True
+    Caption = 'Execute filter'
+    OnClick = btnFilterClick
+    TabOrder = 2
+  end
+  object btnResetFilter: TButton
+    AnchorSideLeft.Control = btnFilter
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = btnFilter
+    Left = 422
+    Height = 25
+    Top = 519
+    Width = 75
+    BorderSpacing.Left = 8
+    Caption = 'Reset filter'
+    OnClick = btnResetFilterClick
+    TabOrder = 3
+  end
+  object JvGridFilter: TJvGridFilter
+    Grid = StringGrid
+    Left = 264
+    Top = 456
+  end
+end

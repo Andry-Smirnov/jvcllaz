@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvCustomLazR"/>
+    <Author Value="Various authors - see header of each unit for original author."/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\run\JvCustomControls"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvCustom"/>
+      </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx6058="True"/>
+        </CompilerMessages>
+      </Other>
+    </CompilerOptions>
+    <Description Value="Custom components of the JVCL library (https://sourceforge.net/projects/jvcl/) (runtime code):
+TimeLine, OutlookBar, Thumbnail viewer, ImageViewer, ImageListViewer, OwnerDrawViewer"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="13">
+      <Item1>
+        <Filename Value="..\run\JvCustomControls\jvtimeline.pas"/>
+        <UnitName Value="JvTimeLine"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\run\JvCustomControls\jvtmtimeline.pas"/>
+        <UnitName Value="JvTMTimeLine"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\run\JvCustomControls\jvoutlookbar.pas"/>
+        <UnitName Value="JvOutlookBar"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\run\JvCustomControls\jvbasethumbnail.pas"/>
+        <UnitName Value="JvBaseThumbnail"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\run\JvCustomControls\jvthumbimage.pas"/>
+        <UnitName Value="JvThumbImage"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\run\JvCustomControls\jvthumbnails.pas"/>
+        <UnitName Value="JvThumbnails"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\run\JvCustomControls\jvthumbviews.pas"/>
+        <UnitName Value="JvThumbViews"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\run\JvCustomControls\jvcustomitemviewer.pas"/>
+        <UnitName Value="JvCustomItemViewer"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\run\JvCustomControls\jvimagelistviewer.pas"/>
+        <UnitName Value="JvImageListViewer"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\run\JvCustomControls\jvimagesviewer.pas"/>
+        <UnitName Value="JvImagesViewer"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\run\JvCustomControls\jvownerdrawviewer.pas"/>
+        <UnitName Value="JvOwnerDrawViewer"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\run\JvCustomControls\jvvalidateedit.pas"/>
+        <UnitName Value="JvValidateEdit"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\run\JvCustomControls\jvgammapanel.pas"/>
+        <UnitName Value="JvGammaPanel"/>
+      </Item13>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="2">
+      <Item1>
+        <PackageName Value="JvCoreLazR"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

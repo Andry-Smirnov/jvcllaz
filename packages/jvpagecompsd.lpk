@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvPageCompsD"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Lazarus port by: Michał Gawrycki"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\design\JvPageComps"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\design\JvPageComps"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Page style components of the JVCL library (https://sourceforge.net/projects/jvcl/) (designtime code)"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="4">
+      <Item1>
+        <Filename Value="..\design\JvPageComps\jvpagecompsreg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="JvPageCompsReg"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\design\JvPageComps\jvnavpaneeditors.pas"/>
+        <UnitName Value="JvNavPaneEditors"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\design\JvPageComps\jvpagelisteditors.pas"/>
+        <UnitName Value="JvPageListEditors"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\design\JvPageComps\jvpagelinkeditorform.pas"/>
+        <UnitName Value="JvPageLinkEditorForm"/>
+      </Item4>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="IDEIntf"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="JvCoreLazD"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="JvPageCompsR"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

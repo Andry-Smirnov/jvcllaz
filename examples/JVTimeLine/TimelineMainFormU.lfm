@@ -1,0 +1,942 @@
+object TimelineMainForm: TTimelineMainForm
+  Left = 357
+  Height = 640
+  Top = 104
+  Width = 752
+  ActiveControl = TimeLine1
+  Caption = 'Test program for TJvTimeLine'
+  ClientHeight = 640
+  ClientWidth = 752
+  Color = clSilver
+  Constraints.MinHeight = 500
+  Constraints.MinWidth = 700
+  DefaultMonitor = dmDesktop
+  Font.Color = clWindowText
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 3
+    Top = 0
+    Width = 752
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 617
+    Width = 752
+    Panels = <    
+      item
+        Width = 200
+      end    
+      item
+        Text = 'Icons provided by www.icons8.com'
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object TimeLine1: TJvTimeLine
+    Left = 0
+    Height = 358
+    Top = 3
+    Width = 752
+    Align = alClient
+    Color = clCream
+    DragCursor = crDefault
+    FirstVisibleDate = 35400
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clMaroon
+    HelperYears = False
+    HorzSupports = True
+    ItemHeight = 40
+    Items = <    
+      item
+        Left = 53
+        Top = 157
+        Caption = ' Pin it up!'
+        Color = 4210688
+        Date = 35431
+        Hint = 'Pin it up!'
+        ImageIndex = 8
+        Level = 1
+        TextColor = clWhite
+        Width = 45
+      end    
+      item
+        Left = 393
+        Top = 157
+        Caption = ' Something arrived'
+        Color = clBtnFace
+        Date = 35637
+        Hint = 'Inbox'
+        ImageIndex = 1
+        Level = 1
+        Selected = True
+        Width = 93
+      end    
+      item
+        Left = 203
+        Top = 157
+        Caption = ' Something departed'
+        Color = 16512
+        Date = 35521
+        Hint = 'Outbox added'
+        ImageIndex = 2
+        Level = 1
+        TextColor = clWhite
+        Width = 110
+      end    
+      item
+        Left = 153
+        Top = 197
+        Caption = ' Something saved'
+        Color = cl3DDkShadow
+        Date = 35490
+        Hint = 'Saved items'
+        ImageIndex = 3
+        Level = 2
+        TextColor = clWhite
+        Width = 88
+      end    
+      item
+        Left = 115
+        Top = 157
+        Caption = ' News started'
+        Color = 8388672
+        Date = 35469
+        Hint = 'News started'
+        ImageIndex = 7
+        Level = 1
+        TextColor = clWhite
+        Width = 70
+      end    
+      item
+        Left = 415
+        Top = 197
+        Caption = ' Flushed it'
+        Color = clTeal
+        Date = 35651
+        Hint = 'Recycled'
+        ImageIndex = 4
+        Level = 2
+        TextColor = clWhite
+        Width = 56
+      end    
+      item
+        Left = 233
+        Top = 237
+        Caption = ' Simons birthday'
+        Color = 8404992
+        Date = 35539
+        Hint = 'Simons birthday'
+        ImageIndex = 8
+        Level = 3
+        TextColor = 16777088
+        Width = 85
+      end    
+      item
+        Left = 361
+        Top = 277
+        Caption = ' Elias birthday'
+        Color = clMaroon
+        Date = 35617
+        Hint = 'Elias birthday'
+        ImageIndex = 8
+        Level = 4
+        TextColor = clWhite
+        Width = 70
+      end    
+      item
+        Left = 206
+        Top = 277
+        Caption = ' Majas birthday'
+        Color = 8388863
+        Date = 35523
+        Hint = 'Majas birthday'
+        ImageIndex = 8
+        Level = 4
+        TextColor = clWhite
+        Width = 85
+      end    
+      item
+        Left = 576
+        Top = 157
+        Caption = ' Folder'
+        Color = 8404992
+        Date = 35749
+        Hint = 'Folder'
+        ImageIndex = 3
+        Level = 1
+        TextColor = clAqua
+      end    
+      item
+        Left = 664
+        Top = 157
+        Caption = ' Item 6'
+        Color = clBlue
+        Date = 35803
+        ImageIndex = 5
+        Level = 1
+        TextColor = clWhite
+      end    
+      item
+        Left = 656
+        Top = 277
+        Caption = ' Item 7'
+        Color = 16384
+        Date = 35798
+        ImageIndex = 6
+        Level = 4
+        TextColor = clWhite
+      end    
+      item
+        Left = 673
+        Top = 237
+        Caption = ' Item 8'
+        Color = 12615935
+        Date = 35809
+        ImageIndex = 7
+        Level = 3
+      end    
+      item
+        Left = 656
+        Top = 197
+        Caption = ' Item 9'
+        Color = 4194368
+        Date = 35798
+        ImageIndex = 6
+        Level = 2
+        TextColor = clWhite
+      end    
+      item
+        Left = 656
+        Top = 157
+        Caption = ' Item 10'
+        Color = clTeal
+        Date = 35798
+        ImageIndex = 6
+        Level = 1
+        TextColor = clAqua
+      end>
+    PopupMenu = PopupMenu1
+    ParentShowHint = False
+    ShowDays = True
+    ShowHint = True
+    ShowItemHint = True
+    ShowMonthNames = False
+    SupportsColor = clSilver
+    TabOrder = 0
+    TabStop = True
+    YearFont.CharSet = ANSI_CHARSET
+    YearFont.Color = clPurple
+    YearFont.Height = -32
+    YearFont.Style = [fsBold]
+    YearWidth = 600
+    OnClick = TimeLine1Click
+    OnDragDrop = TimeLine1DragDrop
+    OnDragOver = TimeLine1DragOver
+    OnDrawItem = TimeLine1DrawItem
+    OnItemClick = TimeLine1ItemClick
+    OnItemMoved = TimeLine1ItemMoved
+    OnLoadItem = TimeLine1LoadItem
+    OnMouseDown = TimeLine1MouseDown
+    OnMouseMove = TimeLine1MouseMove
+    OnSaveItem = TimeLine1SaveItem
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 256
+    Top = 361
+    Width = 752
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 256
+    ClientWidth = 752
+    Color = clForm
+    ParentColor = False
+    TabOrder = 2
+    object Label6: TLabel
+      AnchorSideLeft.Control = GroupBox1
+      AnchorSideTop.Control = GroupBox3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = btnSave
+      Left = 12
+      Height = 30
+      Top = 216
+      Width = 565
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 10
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 10
+      Caption = 'Scrolling is done one month at a time: hold down the Ctrl key when clicking to skip ahead one year instead.'#13#10'Right-click any item to see its actions, check and uncheck boxes to see the properties at work.'
+      ParentColor = False
+      WordWrap = True
+    end
+    object GroupBox1: TGroupBox
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = GroupBox3
+      AnchorSideBottom.Control = GroupBox3
+      AnchorSideBottom.Side = asrBottom
+      Left = 12
+      Height = 198
+      Top = 8
+      Width = 212
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 12
+      Caption = ' New item: '
+      ClientHeight = 178
+      ClientWidth = 208
+      Constraints.MinWidth = 212
+      TabOrder = 0
+      object lblCaption: TLabel
+        AnchorSideLeft.Control = GroupBox1
+        AnchorSideTop.Control = edCaption
+        AnchorSideTop.Side = asrCenter
+        Left = 12
+        Height = 15
+        Top = 6
+        Width = 45
+        BorderSpacing.Left = 12
+        Caption = '&Caption:'
+        FocusControl = edCaption
+        ParentColor = False
+      end
+      object lblImIndex: TLabel
+        AnchorSideLeft.Control = lblDate
+        AnchorSideTop.Control = dtpItemdate
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 15
+        Top = 64
+        Width = 65
+        BorderSpacing.Top = 8
+        Caption = 'ImageInde&x:'
+        ParentColor = False
+      end
+      object lblDate: TLabel
+        AnchorSideLeft.Control = lblCaption
+        AnchorSideTop.Control = dtpItemdate
+        AnchorSideTop.Side = asrCenter
+        Left = 12
+        Height = 15
+        Top = 37
+        Width = 27
+        Caption = '&Date:'
+        FocusControl = dtpItemdate
+        ParentColor = False
+      end
+      object lblLevel: TLabel
+        AnchorSideLeft.Control = Bevel1
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = lblImIndex
+        Left = 112
+        Height = 15
+        Top = 64
+        Width = 30
+        Caption = 'Le&vel:'
+        FocusControl = edLevel
+        ParentColor = False
+      end
+      object btnAdd: TButton
+        AnchorSideLeft.Control = Bevel1
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = btnColor
+        AnchorSideRight.Control = GroupBox1
+        AnchorSideRight.Side = asrBottom
+        Left = 112
+        Height = 25
+        Top = 133
+        Width = 84
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Right = 12
+        Caption = '&Add'
+        OnClick = btnAddClick
+        TabOrder = 5
+      end
+      object edCaption: TEdit
+        AnchorSideLeft.Control = lblCaption
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = GroupBox1
+        AnchorSideRight.Control = btnAdd
+        AnchorSideRight.Side = asrBottom
+        Left = 65
+        Height = 23
+        Top = 2
+        Width = 131
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 2
+        TabOrder = 0
+        Text = 'New item'
+      end
+      object dtpItemdate: TDateTimePicker
+        AnchorSideLeft.Control = edCaption
+        AnchorSideTop.Control = edCaption
+        AnchorSideTop.Side = asrBottom
+        Left = 65
+        Height = 23
+        Top = 33
+        Width = 79
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 4
+        BorderSpacing.Top = 8
+        TrailingSeparator = False
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 35796
+        Time = 0.20616542820062
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        CalAlignment = dtaLeft
+      end
+      object edLevel: TEdit
+        AnchorSideLeft.Control = lblLevel
+        AnchorSideTop.Control = CbImgIndex
+        AnchorSideRight.Control = udLevel
+        Left = 112
+        Height = 23
+        Top = 83
+        Width = 69
+        Anchors = [akTop, akLeft, akRight]
+        TabOrder = 1
+        Text = '0'
+      end
+      object udLevel: TUpDown
+        AnchorSideRight.Control = btnAdd
+        AnchorSideRight.Side = asrBottom
+        Left = 181
+        Height = 23
+        Top = 83
+        Width = 15
+        Anchors = [akTop, akRight]
+        Associate = edLevel
+        Max = 8
+        Min = 0
+        Position = 0
+        TabOrder = 2
+      end
+      object btnColor: TButton
+        AnchorSideLeft.Control = GroupBox1
+        AnchorSideRight.Control = Bevel1
+        AnchorSideBottom.Control = GroupBox1
+        AnchorSideBottom.Side = asrBottom
+        Left = 16
+        Height = 25
+        Top = 133
+        Width = 80
+        Anchors = [akLeft, akRight, akBottom]
+        AutoSize = True
+        BorderSpacing.Left = 16
+        BorderSpacing.Bottom = 20
+        Caption = 'Color...'
+        OnClick = btnColorClick
+        TabOrder = 3
+      end
+      object Bevel1: TBevel
+        AnchorSideLeft.Control = GroupBox1
+        AnchorSideLeft.Side = asrCenter
+        Left = 96
+        Height = 50
+        Top = 64
+        Width = 16
+        Shape = bsSpacer
+      end
+      object CbImgIndex: TComboBoxEx
+        AnchorSideLeft.Control = lblImIndex
+        AnchorSideTop.Control = lblImIndex
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = Bevel1
+        Left = 12
+        Height = 26
+        Top = 83
+        Width = 84
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 4
+        DropDownCount = 24
+        ItemHeight = 20
+        ItemsEx = <>
+        TabOrder = 6
+      end
+    end
+    object GroupBox2: TGroupBox
+      AnchorSideLeft.Control = GroupBox1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = GroupBox3
+      AnchorSideBottom.Control = GroupBox3
+      AnchorSideBottom.Side = asrBottom
+      Left = 248
+      Height = 198
+      Top = 8
+      Width = 258
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 24
+      Caption = ' Options: '
+      ClientHeight = 178
+      ClientWidth = 254
+      TabOrder = 1
+      object chkMonths: TCheckBox
+        AnchorSideLeft.Control = GroupBox2
+        AnchorSideTop.Control = GroupBox2
+        Left = 12
+        Height = 19
+        Top = 2
+        Width = 93
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 2
+        Caption = '&Show months'
+        OnClick = chkMonthsClick
+        TabOrder = 0
+      end
+      object chkMulti: TCheckBox
+        AnchorSideLeft.Control = chkMonths
+        AnchorSideTop.Control = chkMonths
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 19
+        Top = 21
+        Width = 78
+        Caption = '&Multiselect'
+        OnClick = chkMultiClick
+        TabOrder = 1
+      end
+      object chkNoImages: TCheckBox
+        AnchorSideLeft.Control = chkMonths
+        AnchorSideTop.Control = chkMulti
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 19
+        Top = 40
+        Width = 77
+        Caption = '&No images'
+        OnClick = chkNoImagesClick
+        TabOrder = 2
+      end
+      object chkWidthAs: TCheckBox
+        AnchorSideLeft.Control = chkMonths
+        AnchorSideTop.Control = chkNoImages
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 19
+        Top = 59
+        Width = 93
+        Caption = 'W&idth as days'
+        OnClick = chkWidthAsClick
+        TabOrder = 3
+      end
+      object chkAutosize: TCheckBox
+        AnchorSideLeft.Control = chkWidthAs
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = GroupBox2
+        Left = 121
+        Height = 19
+        Top = 2
+        Width = 65
+        BorderSpacing.Left = 16
+        BorderSpacing.Top = 2
+        Caption = 'Autosi&ze'
+        OnClick = chkAutosizeClick
+        TabOrder = 5
+      end
+      object chkSupport: TCheckBox
+        AnchorSideLeft.Control = chkAutosize
+        AnchorSideTop.Control = chkAutosize
+        AnchorSideTop.Side = asrBottom
+        Left = 121
+        Height = 19
+        Top = 21
+        Width = 89
+        Caption = 'Su&pport lines'
+        OnClick = chkSupportClick
+        TabOrder = 6
+      end
+      object chkLarge: TCheckBox
+        AnchorSideLeft.Control = chkAutosize
+        AnchorSideTop.Control = chkSupport
+        AnchorSideTop.Side = asrBottom
+        Left = 121
+        Height = 19
+        Top = 40
+        Width = 90
+        Caption = 'Lar&ge images'
+        OnClick = chkLargeClick
+        TabOrder = 7
+      end
+      object chkOwnerDraw: TCheckBox
+        AnchorSideLeft.Control = chkAutosize
+        AnchorSideTop.Control = chkLarge
+        AnchorSideTop.Side = asrBottom
+        Left = 121
+        Height = 19
+        Top = 59
+        Width = 81
+        Caption = '&Ownerdraw'
+        OnClick = chkOwnerDrawClick
+        TabOrder = 8
+      end
+      object btnAuto: TButton
+        AnchorSideLeft.Control = GroupBox2
+        AnchorSideTop.Control = chkReset
+        AnchorSideBottom.Control = GroupBox2
+        AnchorSideBottom.Side = asrBottom
+        Left = 12
+        Height = 25
+        Top = 121
+        Width = 84
+        AutoSize = True
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 6
+        BorderSpacing.Bottom = 12
+        Caption = 'A&utoLevels'
+        OnClick = btnAutoClick
+        TabOrder = 10
+      end
+      object chkReset: TCheckBox
+        AnchorSideLeft.Control = btnAuto
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = chkFlat
+        AnchorSideTop.Side = asrBottom
+        AnchorSideBottom.Side = asrCenter
+        Left = 112
+        Height = 19
+        Top = 115
+        Width = 103
+        BorderSpacing.Left = 16
+        BorderSpacing.Top = 18
+        Caption = 'Reset levels &first'
+        TabOrder = 11
+      end
+      object chkComplete: TCheckBox
+        AnchorSideLeft.Control = chkReset
+        AnchorSideTop.Control = chkReset
+        AnchorSideTop.Side = asrBottom
+        Left = 112
+        Height = 19
+        Top = 136
+        Width = 130
+        BorderSpacing.Top = 2
+        BorderSpacing.Right = 12
+        BorderSpacing.Bottom = 12
+        Caption = '&Complete evaluation'
+        TabOrder = 12
+      end
+      object chkFlat: TCheckBox
+        AnchorSideLeft.Control = chkAutosize
+        AnchorSideTop.Control = chkOwnerDraw
+        AnchorSideTop.Side = asrBottom
+        Left = 121
+        Height = 19
+        Top = 78
+        Width = 39
+        Caption = '&Flat'
+        OnClick = chkFlatClick
+        TabOrder = 9
+      end
+      object chkHelpYear: TCheckBox
+        AnchorSideLeft.Control = chkMonths
+        AnchorSideTop.Control = chkWidthAs
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 19
+        Top = 78
+        Width = 85
+        Caption = '&Helper years'
+        OnClick = chkHelpYearClick
+        TabOrder = 4
+      end
+    end
+    object GroupBox3: TGroupBox
+      AnchorSideLeft.Control = GroupBox2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel2
+      AnchorSideBottom.Side = asrBottom
+      Left = 530
+      Height = 198
+      Top = 8
+      Width = 187
+      AutoSize = True
+      BorderSpacing.Left = 24
+      BorderSpacing.Top = 8
+      BorderSpacing.Right = 12
+      Caption = ' Sizing: '
+      ClientHeight = 178
+      ClientWidth = 183
+      TabOrder = 2
+      object lblYrSize: TLabel
+        AnchorSideLeft.Control = GroupBox3
+        AnchorSideTop.Control = GroupBox3
+        Left = 12
+        Height = 15
+        Top = 2
+        Width = 47
+        BorderSpacing.Left = 12
+        BorderSpacing.Top = 2
+        Caption = '&Year size:'
+        FocusControl = edYrSize
+        ParentColor = False
+      end
+      object lblItemHeight: TLabel
+        AnchorSideLeft.Control = edItemHeight
+        AnchorSideTop.Control = lblYrSize
+        Left = 101
+        Height = 15
+        Top = 2
+        Width = 61
+        Caption = 'Item&height:'
+        FocusControl = edItemHeight
+        ParentColor = False
+      end
+      object lblFirstVisibleDate: TLabel
+        AnchorSideLeft.Control = edYrSize
+        AnchorSideTop.Control = edYrSize
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 15
+        Top = 52
+        Width = 87
+        BorderSpacing.Top = 8
+        Caption = '&First visible date:'
+        FocusControl = dtpFirstDate
+        ParentColor = False
+      end
+      object btnYrFont: TButton
+        AnchorSideLeft.Control = btnFont
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = btnFont
+        Left = 83
+        Height = 25
+        Top = 110
+        Width = 85
+        AutoSize = True
+        BorderSpacing.Left = 16
+        BorderSpacing.Bottom = 12
+        Caption = 'Yea&r Font...'
+        OnClick = btnYrFontClick
+        TabOrder = 6
+      end
+      object btnFont: TButton
+        AnchorSideLeft.Control = GroupBox3
+        AnchorSideTop.Control = dtpFirstDate
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = ColorBtn
+        AnchorSideRight.Side = asrBottom
+        Left = 8
+        Height = 25
+        Top = 110
+        Width = 59
+        AutoSize = True
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 16
+        BorderSpacing.Bottom = 6
+        Caption = '&Font...'
+        OnClick = btnFontClick
+        TabOrder = 4
+      end
+      object edYrSize: TEdit
+        AnchorSideLeft.Control = lblYrSize
+        AnchorSideTop.Control = lblYrSize
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 23
+        Top = 21
+        Width = 50
+        BorderSpacing.Top = 4
+        TabOrder = 0
+        Text = '600'
+      end
+      object udYrSize: TUpDown
+        AnchorSideLeft.Control = edYrSize
+        AnchorSideLeft.Side = asrBottom
+        Left = 62
+        Height = 23
+        Top = 21
+        Width = 15
+        Associate = edYrSize
+        Increment = 120
+        Max = 32700
+        Min = 24
+        OnClick = udYrSizeClick
+        Position = 600
+        TabOrder = 1
+      end
+      object edItemHeight: TEdit
+        AnchorSideLeft.Control = udYrSize
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = edYrSize
+        Left = 101
+        Height = 23
+        Top = 21
+        Width = 50
+        BorderSpacing.Left = 24
+        TabOrder = 2
+        Text = '36'
+      end
+      object udItemHeight: TUpDown
+        AnchorSideLeft.Control = edItemHeight
+        AnchorSideLeft.Side = asrBottom
+        Left = 151
+        Height = 23
+        Top = 21
+        Width = 15
+        Associate = edItemHeight
+        Min = 0
+        OnClick = udItemHeightClick
+        Position = 36
+        TabOrder = 3
+      end
+      object dtpFirstDate: TDateTimePicker
+        AnchorSideLeft.Control = lblFirstVisibleDate
+        AnchorSideTop.Control = lblFirstVisibleDate
+        AnchorSideTop.Side = asrBottom
+        Left = 12
+        Height = 23
+        Top = 71
+        Width = 79
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 5
+        BorderSpacing.Top = 4
+        TrailingSeparator = False
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        Date = 35401
+        Time = 0.0483997917035595
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+        CalAlignment = dtaLeft
+        OnChange = dtpFirstDateChange
+      end
+      object ColorBtn: TButton
+        AnchorSideLeft.Control = btnFont
+        AnchorSideTop.Control = btnFont
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = btnFont
+        AnchorSideRight.Side = asrBottom
+        AnchorSideBottom.Side = asrBottom
+        Left = 8
+        Height = 25
+        Top = 141
+        Width = 59
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = True
+        BorderSpacing.Bottom = 12
+        Caption = 'Color...'
+        OnClick = ColorBtnClick
+        TabOrder = 7
+      end
+      object cbDragging: TComboBox
+        AnchorSideLeft.Control = ColorBtn
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = ColorBtn
+        AnchorSideTop.Side = asrCenter
+        AnchorSideRight.Control = btnYrFont
+        AnchorSideRight.Side = asrBottom
+        Left = 83
+        Height = 23
+        Top = 142
+        Width = 85
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Left = 16
+        ItemHeight = 15
+        Items.Strings = (
+          'No dragging'
+          'Manual'
+          'Automatic'
+        )
+        OnChange = cbDraggingChange
+        Style = csDropDownList
+        TabOrder = 8
+      end
+    end
+    object btnSave: TButton
+      AnchorSideTop.Control = GroupBox3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = btnLoad
+      Left = 585
+      Height = 25
+      Top = 216
+      Width = 59
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Top = 10
+      BorderSpacing.Right = 12
+      Caption = 'Save...'
+      OnClick = btnSaveClick
+      TabOrder = 3
+    end
+    object btnLoad: TButton
+      AnchorSideTop.Control = btnSave
+      AnchorSideRight.Control = GroupBox3
+      AnchorSideRight.Side = asrBottom
+      Left = 656
+      Height = 25
+      Top = 216
+      Width = 61
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Bottom = 12
+      Caption = 'Load...'
+      OnClick = btnLoadClick
+      TabOrder = 4
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    OnPopup = PopupMenu1Popup
+    left = 80
+    top = 152
+    object Changecaption1: TMenuItem
+      Caption = '&Rename...'
+      OnClick = Changecaption1Click
+    end
+    object Move1: TMenuItem
+      Caption = '&New date...'
+      OnClick = Move1Click
+    end
+    object remove1: TMenuItem
+      Caption = '&Delete...'
+      OnClick = remove1Click
+    end
+    object Disable1: TMenuItem
+      Caption = 'Disable'
+      OnClick = Disable1Click
+    end
+    object N2: TMenuItem
+      Caption = '-'
+    end
+    object Up1: TMenuItem
+      Caption = '&Up'
+      OnClick = Up1Click
+    end
+    object Down1: TMenuItem
+      Caption = 'Do&wn'
+      OnClick = Down1Click
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object Notes1: TMenuItem
+      Caption = '&Notes...'
+      OnClick = Notes1Click
+    end
+  end
+end

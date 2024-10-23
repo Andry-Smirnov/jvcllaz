@@ -1,0 +1,180 @@
+object Form1: TForm1
+  Left = 345
+  Height = 243
+  Top = 131
+  Width = 482
+  AutoSize = True
+  Caption = 'Form1'
+  ClientHeight = 243
+  ClientWidth = 482
+  LCLVersion = '2.1.0.0'
+  object JvCheckBox1: TJvCheckBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 16
+    Height = 19
+    Top = 16
+    Width = 318
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    BorderSpacing.Right = 16
+    Caption = 'Check/uncheck to enable/disable the controls in the box'
+    Checked = True
+    State = cbChecked
+    TabOrder = 0
+    LinkedControls = <    
+      item
+        Control = Button1
+      end    
+      item
+        Control = Edit1
+      end    
+      item
+        Control = Label1
+      end    
+      item
+        Control = Memo1
+      end    
+      item
+        Control = ListBox1
+      end    
+      item
+        Control = ComboBox1
+      end>
+  end
+  object Button2: TButton
+    AnchorSideLeft.Control = Panel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Panel1
+    Left = 322
+    Height = 25
+    Top = 51
+    Width = 75
+    BorderSpacing.Left = 12
+    BorderSpacing.Right = 16
+    Caption = 'Toggle'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = JvCheckBox1
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 158
+    Top = 51
+    Width = 290
+    AutoSize = True
+    BorderSpacing.Around = 16
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Caption = 'Panel1'
+    ClientHeight = 158
+    ClientWidth = 290
+    TabOrder = 2
+    object Button1: TButton
+      AnchorSideTop.Control = ComboBox1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = ListBox1
+      AnchorSideRight.Side = asrBottom
+      Left = 212
+      Height = 25
+      Top = 124
+      Width = 68
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Caption = 'Button1'
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrCenter
+      Left = 10
+      Height = 15
+      Top = 12
+      Width = 34
+      BorderSpacing.Left = 8
+      Caption = 'Label1'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      AnchorSideLeft.Control = Label1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 56
+      Height = 23
+      Top = 8
+      Width = 112
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 6
+      TabOrder = 1
+      Text = 'Edit1'
+    end
+    object Memo1: TMemo
+      AnchorSideLeft.Control = Edit1
+      AnchorSideTop.Control = Edit1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit1
+      AnchorSideRight.Side = asrBottom
+      Left = 56
+      Height = 82
+      Top = 37
+      Width = 112
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 6
+      Lines.Strings = (
+        'Memo1'
+      )
+      TabOrder = 2
+    end
+    object ListBox1: TListBox
+      AnchorSideLeft.Control = Edit1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Edit1
+      AnchorSideBottom.Control = Memo1
+      AnchorSideBottom.Side = asrBottom
+      Left = 180
+      Height = 111
+      Top = 8
+      Width = 100
+      Anchors = [akTop, akLeft, akBottom]
+      BorderSpacing.Left = 12
+      BorderSpacing.Right = 8
+      Items.Strings = (
+        'Item 1'
+        'Item 2'
+        'Item 3'
+        'Item 4'
+        'Item 5'
+      )
+      ItemHeight = 15
+      TabOrder = 3
+    end
+    object ComboBox1: TComboBox
+      AnchorSideLeft.Control = Edit1
+      AnchorSideTop.Control = Memo1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Edit1
+      AnchorSideRight.Side = asrBottom
+      Left = 56
+      Height = 23
+      Top = 125
+      Width = 112
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 6
+      BorderSpacing.Bottom = 8
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Item 1'
+        'Item 2'
+        'Item 3'
+        'Item 4'
+        'Item 5'
+      )
+      TabOrder = 4
+      Text = 'Item 1'
+    end
+  end
+end

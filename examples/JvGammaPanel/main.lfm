@@ -1,0 +1,77 @@
+object DemoForm: TDemoForm
+  Left = 440
+  Height = 265
+  Top = 205
+  Width = 334
+  AutoSize = True
+  Caption = 'JvGammaPanel demo'
+  ClientHeight = 265
+  ClientWidth = 334
+  OnCreate = FormCreate
+  LCLVersion = '2.1.0.0'
+  object JvGammaPanel1: TJvGammaPanel
+    AnchorSideTop.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 8
+    Height = 249
+    Top = 8
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 8
+    ForegroundColor = clWhite
+    BackgroundColor = clBlack
+    OnChangeColor = JvGammaPanel1ChangeColor
+  end
+  object DemoLabel: TLabel
+    AnchorSideLeft.Control = JvGammaPanel1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = JvGammaPanel1
+    AnchorSideTop.Side = asrCenter
+    Left = 105
+    Height = 45
+    Top = 110
+    Width = 214
+    BorderSpacing.Left = 32
+    BorderSpacing.Right = 16
+    Caption = ' This is a test... '
+    Font.Height = -32
+    ParentColor = False
+    ParentFont = False
+  end
+  object FgColorBtn: TColorButton
+    AnchorSideLeft.Control = DemoLabel
+    AnchorSideTop.Control = JvGammaPanel1
+    AnchorSideRight.Side = asrBottom
+    Left = 105
+    Height = 25
+    Top = 8
+    Width = 207
+    BorderWidth = 2
+    ButtonColorAutoSize = False
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    Caption = 'Foreground color'
+    OnColorChanged = FgColorBtnColorChanged
+  end
+  object BgColorBtn: TColorButton
+    AnchorSideLeft.Control = DemoLabel
+    AnchorSideTop.Control = FgColorBtn
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = FgColorBtn
+    AnchorSideRight.Side = asrBottom
+    Left = 105
+    Height = 25
+    Top = 37
+    Width = 207
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    BorderWidth = 2
+    ButtonColorAutoSize = False
+    ButtonColorSize = 16
+    ButtonColor = clBlack
+    Caption = 'Background color'
+    OnColorChanged = BgColorBtnColorChanged
+  end
+end

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvCmpD"/>
+    <Type Value="RunAndDesignTime"/>
+    <Author Value="Various authors - see header of each unit for original author."/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\design\JvCmp"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\design\JvCmp"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Non-visual components of the JVCL library (https://sourceforge.net/projects/jvcl/) (designtime code):
+- Spellchecker component
+- StringHolder (easier access to TStrings at designtime)."/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="2">
+      <Item1>
+        <Filename Value="..\design\JvCmp\jvcmpreg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="JvCmpReg"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\design\JvCmp\jvstrholdereditor.pas"/>
+        <UnitName Value="JvStrHolderEditor"/>
+      </Item2>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="JvCoreLazD"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="JvCmpR"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

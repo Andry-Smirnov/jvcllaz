@@ -1,0 +1,158 @@
+object YearGridEditForm: TYearGridEditForm
+  Left = 303
+  Height = 246
+  Top = 154
+  Width = 394
+  BorderStyle = bsDialog
+  Caption = 'YearGrid Edit'
+  ClientHeight = 246
+  ClientWidth = 394
+  Color = clBtnFace
+  Font.Color = clWindowText
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  object Panel1: TPanel
+    Left = 6
+    Height = 26
+    Top = 214
+    Width = 382
+    Align = alBottom
+    AutoSize = True
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 26
+    ClientWidth = 382
+    TabOrder = 2
+    object BtnOK: TBitBtn
+      AnchorSideTop.Control = BitCancel
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = BitCancel
+      AnchorSideBottom.Side = asrBottom
+      Left = 232
+      Height = 26
+      Top = 0
+      Width = 62
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      BorderSpacing.Left = 16
+      BorderSpacing.Right = 6
+      Caption = 'OK'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      TabOrder = 2
+    end
+    object BitCancel: TBitBtn
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 300
+      Height = 26
+      Top = 0
+      Width = 82
+      Anchors = [akTop, akRight]
+      AutoSize = True
+      Cancel = True
+      Caption = 'Cancel'
+      Kind = bkCancel
+      ModalResult = 2
+      TabOrder = 3
+    end
+    object BtnLoad: TButton
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = BtnOK
+      AnchorSideBottom.Control = BtnOK
+      AnchorSideBottom.Side = asrBottom
+      Left = 0
+      Height = 26
+      Top = 0
+      Width = 61
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      Caption = '&Load...'
+      OnClick = BtnLoadClick
+      TabOrder = 0
+    end
+    object BtnSave: TButton
+      AnchorSideLeft.Control = BtnLoad
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = BtnLoad
+      AnchorSideBottom.Control = BtnLoad
+      AnchorSideBottom.Side = asrBottom
+      Left = 65
+      Height = 26
+      Top = 0
+      Width = 59
+      Anchors = [akTop, akLeft, akBottom]
+      AutoSize = True
+      BorderSpacing.Left = 4
+      BorderSpacing.Right = 16
+      Caption = '&Save...'
+      OnClick = BtnSaveClick
+      TabOrder = 1
+    end
+  end
+  object MemoText: TMemo
+    Left = 6
+    Height = 172
+    Top = 36
+    Width = 382
+    Align = alClient
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    TabOrder = 1
+  end
+  object Panel2: TPanel
+    Left = 6
+    Height = 24
+    Top = 6
+    Width = 382
+    Align = alTop
+    AutoSize = True
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 24
+    ClientWidth = 382
+    TabOrder = 0
+    object ColorBox: TColorBox
+      AnchorSideLeft.Control = LblColor
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel2
+      AnchorSideRight.Control = Panel2
+      AnchorSideRight.Side = asrBottom
+      Left = 37
+      Height = 24
+      Top = 0
+      Width = 345
+      Style = [cbStandardColors, cbExtendedColors, cbIncludeNone, cbIncludeDefault, cbPrettyNames, cbCustomColors]
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 8
+      DropDownCount = 24
+      ItemHeight = 16
+      TabOrder = 0
+    end
+    object LblColor: TLabel
+      AnchorSideLeft.Control = Panel2
+      AnchorSideTop.Control = ColorBox
+      AnchorSideTop.Side = asrCenter
+      Left = 0
+      Height = 15
+      Top = 5
+      Width = 29
+      Caption = 'Color'
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Filter = 'Text Files|*.txt|All Files|*.*'
+    Left = 64
+    Top = 80
+  end
+  object SaveDialog: TSaveDialog
+    DefaultExt = '.txt'
+    Filter = 'Text Files|*.txt|All Files|*.*'
+    Left = 64
+    Top = 136
+  end
+end

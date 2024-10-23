@@ -1,0 +1,385 @@
+object ApptEdit: TApptEdit
+  Left = 218
+  Height = 189
+  Top = 152
+  Width = 350
+  AutoSize = True
+  Caption = 'ApptEdit'
+  ClientHeight = 189
+  ClientWidth = 350
+  Color = clBtnFace
+  Font.Color = clWindowText
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Bevel1: TBevel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 10
+    Top = 29
+    Width = 338
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    Shape = bsBottomLine
+  end
+  object Bevel2: TBevel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = EndDatePicker
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 10
+    Top = 97
+    Width = 338
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Right = 6
+    Shape = bsBottomLine
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Image1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = StartDatePicker
+    AnchorSideTop.Side = asrCenter
+    Left = 50
+    Height = 15
+    Top = 51
+    Width = 56
+    BorderSpacing.Left = 12
+    Caption = 'Start &Time:'
+    FocusControl = StartDatePicker
+    ParentColor = False
+  end
+  object Label3: TLabel
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = EndDatePicker
+    AnchorSideTop.Side = asrCenter
+    Left = 50
+    Height = 15
+    Top = 78
+    Width = 52
+    Caption = '&End Time:'
+    FocusControl = EndDatePicker
+    ParentColor = False
+  end
+  object Label5: TLabel
+    AnchorSideLeft.Control = UpDown1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = AlarmAdvanceEdit
+    AnchorSideTop.Side = asrCenter
+    Left = 192
+    Height = 15
+    Top = 119
+    Width = 80
+    BorderSpacing.Left = 8
+    BorderSpacing.Right = 6
+    Caption = 'minutes before'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrCenter
+    Left = 6
+    Height = 15
+    Top = 10
+    Width = 42
+    BorderSpacing.Left = 6
+    Caption = '&Subject:'
+    FocusControl = Edit1
+    ParentColor = False
+  end
+  object Image1: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Bevel1
+    AnchorSideTop.Side = asrBottom
+    Left = 6
+    Height = 32
+    Top = 47
+    Width = 32
+    AutoSize = True
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 8
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869633006000089504E47
+      0D0A1A0A0000000D4948445200000020000000200806000000737A7AF4000005
+      F7494441545885D596DD53135718C6BDE81FD10B2FFB2778D90BEFFA310326BB
+      212ACE74A622524BA58C1843BAC9D92C84AAD4CAA0A2824644B47C683AC340B2
+      399BC4E84C35241A3F08042480094128109290F02DF0F44241680802ED45FBDC
+      ED39EFEEEFD9739EF3EEEEDAF57FD2D72AF3A7193F998FC8096D6678C925D759
+      07E53AEB20C34B2E39A1CD193F998F30A72CBBFF757066B1F94B86977C324E5C
+      C8A9684F16D5BE82BABE1FDAC610B48D21A8EBFB71E2460F722ADCD3324E5C60
+      78C997A1B1C8FE399833EF51E86D5D0ABD6D4A5DDF8FB3E62848731805359DC8
+      AFF222AFD285BC4A17BEBFF414C7AB7DD0350DA2DC1243F1ED016409F604AB97
+      7A3339F39E1DC1F7973AF3E45A71A6D0D8BD7CA66D023F5EEB44B6C18E43061B
+      2A4D1DB8F7B00F0E6F180E6F184DCE002E983A70C86047B6C18EC21A1FCEB44D
+      A0D0E85F9671E2C27E83A3705B7086500D43E8BCAE69105C4310D906074E55BB
+      F0A26F1C6B35164F62249A5837F6A26F1CEA6A17F697D8A0B93300FEEE101842
+      E7153CADD8F29B3384CE08A61114DF7A05A59EE2FEF321FC5DCBCBCB68F707F1
+      B8EB3516979652E63D3DA33850224155DB85B29631B0449A3950E6546F0ACFE4
+      CC7BE43AEBACAE691045B53D3864B021F46722E5E12B8A4FCD20969C4919AFFF
+      DD0E00088F25917BEE010A6A7C104CC390EBC4F90CAEF5F3B4061482D45978DD
+      BFC83504A1D4D34DE1E9D4DCF610576EB7AE5E0F47A6A1D45368EE0CE0E4CD5E
+      B0BC14DA10CE0A8E0C855E9A3AD336816C8303CE0D96FD63F2F5BC4681BE0A13
+      B1C975E3DEDE31280509A75B2350963A120AC19E971A3C5EF2A9EBFBA1AAED42
+      D115D7B6E18B8B4BD0FD7A137F3CF16D38CF193D28BADE01AE2108865883EBE0
+      5FABCC9FCA3871E1AC398A6C833D25ED5BD16F2DF771ADC19C763E3014074BAC
+      28B7C4C0123A9559DCF2D9AA817D5A31EFDB73AE08690EE390C1B66DF8F3AE3E
+      9C28BD8A78626AD3BAC3E54E700D41E454786272420DAB06E4843617D5BE4241
+      4D272A4D1DDB82CFCD2F40536E84EB99FFA3B5464B37F22F3F87AA2E009648D6
+      0F01D44BEDEAFA7EFC70D98B7B0FFBB6045E5A5A42FBF36EFC52DD8CEB8DE296
+      EE11DD21E45FF240DB18024B68CF8700123AA86D0CE1BB4A171CDE30466349B4
+      FB83884FA59EF1153D7477E0A8A602473515303BDD69EB923373707707313231
+      094FCF288E9E7F04C13402B9CE1A496B60249AC0E3AED78826A6D33EF841FBCB
+      5503C6A6F42B30393D8BC75DAF31341E4F6F40C14B6E757D3FF2AB9EAE6EC146
+      ED75AD16DEBEC5FDC72F70F31EC5514D05BCBEDEB4B54BCBCB0036DB029EDE2D
+      AA7D85E3D53E5CD8660801C0EBEBFDA809E07D08AB9E4155170043A8F421843A
+      E9BB6F7F754DE89A0677740CB76A62E5181EA9F4C419BDF4F387153865D92DE3
+      C485724B6CC78D68AD894432353B2B8DE8AC399ADA88DE07D15F7C7B00AA1B9D
+      38B98356FC3191DA2728BAF6125C43107242DFA47C0BE444CACA12EC89336D13
+      D85F6283B777EC5F83FB835164E9294EB74670D0E08CB182949F62E07D43EA2D
+      34762F6AEE0C40A9A7088F25FF313C129F45B6C186E2FAC0BB0EC8D3F05EBDF3
+      930D0D6472E63D324E5CE0EF0EA1A0C687DC730F301C49DF0B923373989C9EDD
+      149E7BEE010AAA3B20988621D38A730A42BFDA10BEA28306472143E86C59CB18
+      4EDEE884524FD36E87BBFBDD2FD9CA395F2B7F308A6C830D45D77D286B194396
+      609B3A50E22CDD14BE22054F2B585E9A174CC328BE3D00A52081AF7D8281E1F5
+      3F1A231393181A8FAF1B0B0CC5517AEB29B2F414AABA0004D330B24AEC732CB1
+      D66C09BEA203654EB54C2BCE9DBCD98BD3AD111CBFFA122CB122A7DC09A3A51B
+      A23B044FCF283C3DA310DD21182DDDC829778225561CBFF202A75B2350D50520
+      D38A735B7EF39495D08B7B595E0A294B1D09AE2188B3E628B88620F2AB9EE1D8
+      450F72CF3F42EEF9473876D183FCAA67585B73D0E08CB13C0DB3C4F6C58EE06B
+      B54F67FD8621D62043E8746EE59359555D00DAC61004D30804D308B48D21A8EA
+      02C8AD7C3ACF103A2D27F44DA6CE72386DDA77AACCE296CFF67116C212C9CA10
+      EA97EBACE3729D759C21D4CF102AEDE32C24A5C3FDD7F517CAA592C8B12E2C19
+      0000000049454E44AE426082
+    }
+    Transparent = True
+  end
+  object Image2: TImage
+    AnchorSideLeft.Control = Image1
+    AnchorSideTop.Control = Bevel2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 24
+    Top = 115
+    Width = 24
+    AutoSize = True
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 8
+    Picture.Data = {
+      1754506F727461626C654E6574776F726B477261706869633102000089504E47
+      0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000001
+      F8494441544889ED96CF6B134114C773C821070F3978E8C13FC5C3DCF266AB5E
+      0A2D7A152A147AE8C1533D2C041A8A1091122179B3597F507A50E8C5B6C9BCD6
+      A52548A93FA07521C628B4074B1A5B83B4104ADD3C0FBA524835B39A631F7C8F
+      F3F9CCBC99612616332CCF154952F21539726BC1B5064CC799C16D112FE7C1D6
+      08AC11983075CFB345BC3FE002DC21257743F86F89239B8490F172E2C23FC117
+      5C6B80947C494A763697463BFBD5690EBE3CE4CEC1636ED5B3ECEB31266505A4
+      AC778B282F459BB92B12E4581F968B5782FDEA34F3D72767A655CFF28B47D7BE
+      6B94BB9156420AD21A810FDEDFFD233CCCB74FF77FB64C41DA6CF6F9AB17B592
+      C75BA55B3DE1617C3DC65AC963CF15C99E82924A8146E03D7FCA58B0E74FB146
+      E0924A41EFF614E4B846E0A39D9CB1E06827C71A81CB0539DE53109E77537818
+      8DC0E53CD8E78273412C56C6D483B5D9A17654C1DAEC509B14E4FE0AF75C9124
+      4736DF3EBF1979059B8BA34C8E6C9E799B3D5724280F9735CAD72BC5C193563D
+      1B5970B83DC32BC5C1134278B384203C5724BAFA5E991B6E1F6ECF44869FBED1
+      95B9E176D77E8482DAEA047FACDCFEAFD45627BA37FCF473D8AF189DA8B09695
+      AC6DCCDFE0863FC90D7F9237E6AF77345A556340AF22848C4619AC3F1D09D69F
+      8DFC7AF821D33781678B3829489382CFA464831032A6BF8A1FDBA511CB562822
+      EB0000000049454E44AE426082
+    }
+    Transparent = True
+  end
+  object StartDatePicker: TDateTimePicker
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Image1
+    Left = 114
+    Height = 23
+    Top = 47
+    Width = 79
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 1
+    BorderSpacing.Left = 8
+    TrailingSeparator = False
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 36235
+    Time = 0.775961111103243
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+    CalAlignment = dtaLeft
+  end
+  object StartTimePicker: TDateTimePicker
+    AnchorSideLeft.Control = StartDatePicker
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = StartDatePicker
+    Left = 217
+    Height = 23
+    Top = 47
+    Width = 65
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 2
+    BorderSpacing.Left = 24
+    BorderSpacing.Right = 6
+    TrailingSeparator = False
+    LeadingZeros = True
+    Kind = dtkTime
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 36235
+    Time = 0.776266203698469
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+    CalAlignment = dtaLeft
+  end
+  object EndDatePicker: TDateTimePicker
+    AnchorSideLeft.Control = StartDatePicker
+    AnchorSideTop.Control = StartDatePicker
+    AnchorSideTop.Side = asrBottom
+    Left = 114
+    Height = 23
+    Top = 74
+    Width = 79
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 3
+    BorderSpacing.Top = 4
+    TrailingSeparator = False
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 36235
+    Time = 0.776392129599117
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+    CalAlignment = dtaLeft
+  end
+  object EndTimePicker: TDateTimePicker
+    AnchorSideLeft.Control = StartTimePicker
+    AnchorSideTop.Control = EndDatePicker
+    Left = 217
+    Height = 23
+    Top = 74
+    Width = 65
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 4
+    BorderSpacing.Right = 6
+    TrailingSeparator = False
+    LeadingZeros = True
+    Kind = dtkTime
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 36235
+    Time = 0.77642199069669
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+    CalAlignment = dtaLeft
+  end
+  object AlarmEnabledCheck: TCheckBox
+    AnchorSideLeft.Control = Label1
+    AnchorSideTop.Control = AlarmAdvanceEdit
+    AnchorSideTop.Side = asrCenter
+    Left = 50
+    Height = 19
+    Top = 117
+    Width = 74
+    Caption = '&Reminder:'
+    TabOrder = 5
+  end
+  object AlarmAdvanceEdit: TEdit
+    AnchorSideLeft.Control = AlarmEnabledCheck
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Image2
+    Left = 132
+    Height = 23
+    Top = 115
+    Width = 37
+    Alignment = taRightJustify
+    BorderSpacing.Left = 8
+    BorderSpacing.Bottom = 8
+    TabOrder = 6
+    Text = '0'
+  end
+  object UpDown1: TUpDown
+    AnchorSideLeft.Control = AlarmAdvanceEdit
+    AnchorSideLeft.Side = asrBottom
+    Left = 169
+    Height = 23
+    Top = 115
+    Width = 15
+    Associate = AlarmAdvanceEdit
+    Max = 60
+    Min = 0
+    OnClick = UpDown1Click
+    Position = 0
+    TabOrder = 7
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label6
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 54
+    Height = 23
+    Top = 6
+    Width = 290
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 6
+    BorderSpacing.Top = 6
+    BorderSpacing.Right = 6
+    Constraints.MinWidth = 280
+    TabOrder = 0
+  end
+  object ButtonPanel1: TButtonPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Image2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 6
+    Height = 26
+    Top = 155
+    Width = 338
+    Align = alNone
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 8
+    ShowButtons = [pbOK, pbCancel]
+    ShowBevel = False
+  end
+end

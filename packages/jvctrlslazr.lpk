@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="JvCtrlsLazR"/>
+    <Author Value="Several original authors - see header of each unit for details. Lazarus port by: Michał Gawrycki, Werner Pamler"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\run\JvCtrls"/>
+        <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvCtrls"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="Visual controls of the JVCL library (https://sourceforge.net/projects/jvcl/) (runtime code):
+Movable bevel and panel, ruler, exandable panel (RollOut), group header, hypertext components 
+"/>
+    <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
+    <Version Major="1" Release="8"/>
+    <Files Count="11">
+      <Item1>
+        <Filename Value="..\run\JvCtrls\jvhint.pas"/>
+        <UnitName Value="JvHint"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\run\JvCtrls\jvhtcontrols.pas"/>
+        <UnitName Value="JvHtControls"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\run\JvCtrls\jvmovablebevel.pas"/>
+        <UnitName Value="JvMovableBevel"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\run\JvCtrls\jvruler.pas"/>
+        <UnitName Value="JvRuler"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\run\JvCtrls\jvgroupheader.pas"/>
+        <UnitName Value="JvGroupHeader"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\run\JvCtrls\jvrollout.pas"/>
+        <UnitName Value="JvRollOut"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\run\JvCtrls\jvcombolistbox.pas"/>
+        <UnitName Value="JvComboListBox"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\run\JvCtrls\jvautocomplete.pas"/>
+        <UnitName Value="JvAutoComplete"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\run\JvCtrls\jvinstalllabel.pas"/>
+        <UnitName Value="JvInstallLabel"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\run\JvCtrls\jvofficecolorpanel.pas"/>
+        <UnitName Value="JvOfficeColorPanel"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\run\JvCtrls\jvbehaviorlabel.pas"/>
+        <UnitName Value="JvBehaviorLabel"/>
+      </Item11>
+    </Files>
+    <CompatibilityMode Value="True"/>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="JvStdCtrlsLazR"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="JvCoreLazR"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
