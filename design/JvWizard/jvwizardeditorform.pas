@@ -15,8 +15,8 @@ Portions created by William Yu Wei are Copyright (C) 2002 William Yu Wei.
 All Rights Reserved.
 
 Contributor(s):
-Peter Thörnqvist - converted to JVCL naming conventions on 2003-07-11
-Micha³ Gawrycki - Lazarus port (2019)
+Peter ThÑ†rnqvist - converted to JVCL naming conventions on 2003-07-11
+MichaÑ– Gawrycki - Lazarus port (2019)
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,
 located at http://jvcl.delphi-jedi.org

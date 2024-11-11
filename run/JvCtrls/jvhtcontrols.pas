@@ -40,7 +40,7 @@ Peter Thornqvist:
   2004-01-279
     + Moved implementations to TJvCustomXXX classed
     + Now the registered controls only publish properties and events
-André Snepvangers:
+AndrÐ¹ Snepvangers:
   2004-01-06
       VisualCLX compatible version
 Maciej Kaczkowski:

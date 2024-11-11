@@ -15,9 +15,9 @@ Portions created by Steve Forbes are Copyright (C) 2002 Steve Forbes.
 All Rights Reserved.
 
 Contributor(s):
-Peter Thörnqvist - converted to JVCL naming conventions on 2003-07-11
+Peter ThÑ†rnqvist - converted to JVCL naming conventions on 2003-07-11
 S Steed. - added AllowClickableNodes property
-Micha³ Gawrycki - Lazarus port (2019)
+MichaÑ– Gawrycki - Lazarus port (2019)
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,
 located at http://jvcl.delphi-jedi.org

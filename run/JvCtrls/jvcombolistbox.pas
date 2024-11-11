@@ -11,7 +11,7 @@ the specific language governing rights and limitations under the License.
 The Original Code is: JvComboListBox.PAS, released on 2003-10-07.
 
 The Initial Developer of the Original Code is Peter Thornqvist <peter3 at sourceforge.net>
-Portions created by Sébastien Buysse are Copyright (C) 2003 Peter Thornqvist .
+Portions created by SÐ¹bastien Buysse are Copyright (C) 2003 Peter Thornqvist .
 All Rights Reserved.
 
 Contributor(s):

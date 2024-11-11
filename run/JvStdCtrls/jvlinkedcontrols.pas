@@ -10,8 +10,8 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvLinkedControls.PAS, released on 2004-01-26.
 
-The Initial Developer of the Original Code is Peter Thörnqvist
-Portions created by Peter Thörnqvist are Copyright (C) 2004 Peter Thörnqvist.
+The Initial Developer of the Original Code is Peter ThÑ†rnqvist
+Portions created by Peter ThÑ†rnqvist are Copyright (C) 2004 Peter ThÑ†rnqvist.
 All Rights Reserved.
 
 Contributor(s):

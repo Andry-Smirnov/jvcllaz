@@ -15,9 +15,9 @@ Portions created by William Yu Wei are Copyright (C) 2001 William Yu Wei.
 All Rights Reserved.
 
 Contributor(s):
-Peter Thörnqvist - converted to JVCL naming conventions on 2003-07-11
+Peter ThÑ†rnqvist - converted to JVCL naming conventions on 2003-07-11
 Andreas Hausladen - fixed some bugs, refactoring of the Wizard button classes on 2004-02-29
-Micha³ Gawrycki - Lazarus port
+MichaÑ– Gawrycki - Lazarus port
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,
 located at http://jvcl.delphi-jedi.org

@@ -8205,7 +8205,7 @@ begin
   NextToken;
   if TTyp <> ttSemicolon then
     ErrorExpected(''';''');
-  // конец разбора
+  // РєРѕРЅРµС† СЂР°Р·Р±РѕСЂР°
 
   FAdapter.FRecordList.Add(JvInterpreterRecord);
 end;
