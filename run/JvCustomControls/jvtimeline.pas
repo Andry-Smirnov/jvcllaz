@@ -10,8 +10,8 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvTimeLine.PAS, released on 2002-05-26.
 
-The Initial Developer of the Original Code is Peter Thörnqvist [peter3 at sourceforge dot net]
-Portions created by Peter Th�rnqvist are Copyright (C) 2002 Peter Thörnqvist.
+The Initial Developer of the Original Code is Peter ThГ¶rnqvist [peter3 at sourceforge dot net]
+Portions created by Peter Thцrnqvist are Copyright (C) 2002 Peter ThГ¶rnqvist.
 All Rights Reserved.
 
 Contributor(s):

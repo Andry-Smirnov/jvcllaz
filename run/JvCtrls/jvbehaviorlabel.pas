@@ -10,12 +10,12 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvBehaviorLabel.PAS, released on 2003-03-24.
 
-The Initial Developer of the Original Code is Peter Thörnqvist [peter3 at sourceforge dot net]
-Portions created by Peter Thörnqvist are Copyright (C) 2003 Peter Thörnqvist.
+The Initial Developer of the Original Code is Peter ThÑ†rnqvist [peter3 at sourceforge dot net]
+Portions created by Peter ThÑ†rnqvist are Copyright (C) 2003 Peter ThÑ†rnqvist.
 All Rights Reserved.
 
 Contributor(s):
-Sébastien Buysse [sbuysse att buypin dott com] - original author of the merged components
+SÐ¹bastien Buysse [sbuysse att buypin dott com] - original author of the merged components
 Michael Beck [mbeck att bigfoot dott com].
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,

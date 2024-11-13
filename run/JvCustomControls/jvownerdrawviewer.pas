@@ -10,9 +10,9 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvOwnerDrawViewer.PAS, released on 2003-12-01.
 
-The Initial Developer of the Original Code is: Peter Thörnqvist
+The Initial Developer of the Original Code is: Peter ThÑ†rnqvist
 All Rights Reserved.
-Lazarus port: Micha³ Gawrycki
+Lazarus port: MichaÑ– Gawrycki
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,
 located at http://jvcl.delphi-jedi.org

@@ -14,61 +14,67 @@
     <Description Value="A meta package for simple installation of all JVCL designtime packages."/>
     <Version Major="1" Release="8"/>
     <CompatibilityMode Value="True"/>
-    <RequiredPkgs Count="18">
+    <RequiredPkgs Count="20">
       <Item1>
-        <PackageName Value="JvPascalInterpreterD"/>
+        <PackageName Value="LCL"/>
       </Item1>
       <Item2>
-        <PackageName Value="JvTimeFrameworkLazD"/>
+        <PackageName Value="FCL"/>
       </Item2>
       <Item3>
-        <PackageName Value="JvXPCtrlsLazD"/>
+        <PackageName Value="JvPascalInterpreterD"/>
       </Item3>
       <Item4>
-        <PackageName Value="JvWizardLazD"/>
+        <PackageName Value="JvTimeFrameworkLazD"/>
       </Item4>
       <Item5>
-        <PackageName Value="JvValidatorsLazD"/>
+        <PackageName Value="JvXPCtrlsLazD"/>
       </Item5>
       <Item6>
-        <PackageName Value="JvRuntimeDesignLazD"/>
+        <PackageName Value="JvWizardLazD"/>
       </Item6>
       <Item7>
-        <PackageName Value="JvPageCompsD"/>
+        <PackageName Value="JvValidatorsLazD"/>
       </Item7>
       <Item8>
-        <PackageName Value="JvNetLazD"/>
+        <PackageName Value="JvRuntimeDesignLazD"/>
       </Item8>
       <Item9>
-        <PackageName Value="JvMMLazD"/>
+        <PackageName Value="JvPageCompsD"/>
       </Item9>
       <Item10>
-        <PackageName Value="JvJansLazD"/>
+        <PackageName Value="JvNetLazD"/>
       </Item10>
       <Item11>
-        <PackageName Value="JvStdCtrlsLazD"/>
+        <PackageName Value="JvMMLazD"/>
       </Item11>
       <Item12>
-        <PackageName Value="JvHMILazD"/>
+        <PackageName Value="JvJansLazD"/>
       </Item12>
       <Item13>
-        <PackageName Value="JvDBLazD"/>
+        <PackageName Value="JvStdCtrlsLazD"/>
       </Item13>
       <Item14>
-        <PackageName Value="JvCustomLazD"/>
+        <PackageName Value="JvHMILazD"/>
       </Item14>
       <Item15>
-        <PackageName Value="JvCtrlsLazD"/>
+        <PackageName Value="JvDBLazD"/>
       </Item15>
       <Item16>
-        <PackageName Value="JvAppFrmLazD"/>
+        <PackageName Value="JvCustomLazD"/>
       </Item16>
       <Item17>
-        <PackageName Value="JvCmpD"/>
+        <PackageName Value="JvCtrlsLazD"/>
       </Item17>
       <Item18>
-        <PackageName Value="JvCoreLazD"/>
+        <PackageName Value="JvAppFrmLazD"/>
       </Item18>
+      <Item19>
+        <PackageName Value="JvCmpD"/>
+      </Item19>
+      <Item20>
+        <PackageName Value="JvCoreLazD"/>
+      </Item20>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>

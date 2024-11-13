@@ -1,4 +1,4 @@
-ï»¿{-----------------------------------------------------------------------------
+{-----------------------------------------------------------------------------
 The contents of this file are subject to the Mozilla Public License
 Version 1.1 (the "License"); you may not use this file except in compliance
 with the License. You may obtain a copy of the License at
@@ -10,8 +10,8 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvSpellChecker.PAS, released on 2003-08-19.
 
-The Initial Developer of the Original Code is Peter Thörnqvist [peter3 at sourceforge dot net]
-Portions created by Peter Thörnqvist are Copyright (C) 2003 Peter Thörnqvist.
+The Initial Developer of the Original Code is Peter ThÑ†rnqvist [peter3 at sourceforge dot net]
+Portions created by Peter ThÑ†rnqvist are Copyright (C) 2003 Peter ThÑ†rnqvist.
 All Rights Reserved.
 
 Contributor(s):

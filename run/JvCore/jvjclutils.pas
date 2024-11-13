@@ -224,7 +224,7 @@ function SpacesW(const N: Integer): WideString;
 function AddSpacesW(const S: WideString; const N: Integer): WideString;
 {$ENDIF !CLR}
 { function LastDateRUS for russian users only }
-{ returns date relative to current date: '‰‚‡ ‰Ìˇ Ì‡Á‡‰' }
+{ returns date relative to current date: '–¥–≤–∞ –¥–Ω—è –Ω–∞–∑–∞–¥' }
 function LastDateRUS(const Dat: TDateTime): string;
 { CurrencyToStr format Currency, Cur, using ffCurrency float format}
 function CurrencyToStr(const Cur: Currency): string;
@@ -2528,8 +2528,8 @@ end;
 
 function Win2Koi(const S: string): string;
 const
-  W = '‡·‚„‰Â∏ÊÁËÈÍÎÏÌÓÔÒ=ÛÙı˜ˆ¯˘¸˚˙˝›ˇ+--+-+®∆«++--›-+œ–—“”‘i◊÷ÿ+_›+›ﬁÓ';
-  K = '--◊«-+£÷++--›-+œ–“”‘i∆+ﬁ+››ÿ+Ó_+—·‚˜Á‰Â›ˆ˙ÈÍÎÏÌÓÔ=ÛÙıÊË›„˚˝¯˘ˇ¸‡Ò';
+  W = '–∞–±–≤–≥–¥–µ—ë–∂–∑–∏–π–∫–ª–º–Ω–æ–ø—Ä—Å=—É—Ñ—Ö—á—Ü—à—â—å—ã—ä—ç–≠—è+--+-+–Å–ñ–ó++--–≠-+–ü–†–°–¢–£–§i–ß–¶–®+_–≠+–≠–Æ–æ';
+  K = '--–ß–ó-+–à–¶++--–≠-+–ü–†–¢–£–§i–ñ+–Æ+–≠–≠–®+–æ_+–°–±–≤—á–∑–¥–µ–≠—Ü—ä–π–∫–ª–º–Ω–æ–ø—Ä=—É—Ñ—Ö–∂–∏–≠–≥—ã—ç—à—â—è—å–∞—Å';
 var
   I, J: Integer;
 begin
@@ -2713,43 +2713,43 @@ const
   D2D: array [0..9] of Byte =
     (3, 1, 2, 2, 2, 3, 3, 3, 3, 3);
   Day: array [1..3] of string =
-    ('‰ÂÌ¸', '‰Ìˇ', '‰ÌÂÈ'); // Day, Days, Days
+    ('–¥–µ–Ω—å', '–¥–Ω—è', '–¥–Ω–µ–π'); // Day, Days, Days
   Month: array [1..3] of string =
-    ('ÏÂÒˇˆ', 'ÏÂÒˇˆ‡', 'ÏÂÒˇˆÂ‚'); // Month, Months, Months
+    ('–º–µ—Å—è—Ü', '–º–µ—Å—è—Ü–∞', '–º–µ—Å—è—Ü–µ–≤'); // Month, Months, Months
   Year: array [1..3] of string =
-    ('„Ó‰', '„Ó‰‡', 'ÎÂ='); // Year, Years, Years
+    ('–≥–æ–¥', '–≥–æ–¥–∞', '–ª–µ='); // Year, Years, Years
   Week: array [1..4] of string =
-    ('ÌÂ‰ÂÎ›', '2 ÌÂ‰ÂÎË', '3 ÌÂ‰ÂÎË', 'ÏÂÒˇˆ'); // Week, 2 Weeks, 3 Weeks, Month
+    ('–Ω–µ–¥–µ–ª–≠', '2 –Ω–µ–¥–µ–ª–∏', '3 –Ω–µ–¥–µ–ª–∏', '–º–µ—Å—è—Ü'); // Week, 2 Weeks, 3 Weeks, Month
 var
   Y, M, D: Integer;
 begin
   if Date = Dat then
-    Result := 'ÒÂ„Ó‰Ìˇ' // Today
+    Result := '—Å–µ–≥–æ–¥–Ω—è' // Today
   else
   if Dat = Date - 1 then
-    Result := '‚˜Â‡' // Yesterday
+    Result := '–≤—á–µ—Ä–∞' // Yesterday
   else
   if Dat = Date - 2 then
-    Result := 'ÔÓÁ‡‚˜Â‡' // Day before yesterday
+    Result := '–ø–æ–∑–∞–≤—á–µ—Ä–∞' // Day before yesterday
   else
   if Dat > Date then
-    Result := '‚ ·Û‰Û˘ÂÏ' // In the future
+    Result := '–≤ –±—É–¥—É—â–µ–º' // In the future
   else
   begin
     D := Trunc(Date - Dat);
     Y := Round(D / 365);
     M := Round(D / 30);
     if Y > 0 then
-      Result := IntToStr(Y) + ' ' + Year[D2D[StrToInt(IntToStr(Y)[Length(IntToStr(Y))])]] + ' Ì‡Á‡‰' // ago
+      Result := IntToStr(Y) + ' ' + Year[D2D[StrToInt(IntToStr(Y)[Length(IntToStr(Y))])]] + ' –Ω–∞–∑–∞–¥' // ago
     else
     if M > 0 then
-      Result := IntToStr(M) + ' ' + Month[D2D[StrToInt(IntToStr(M)[Length(IntToStr(M))])]] + ' Ì‡Á‡‰' // ago
+      Result := IntToStr(M) + ' ' + Month[D2D[StrToInt(IntToStr(M)[Length(IntToStr(M))])]] + ' –Ω–∞–∑–∞–¥' // ago
     else
     if D > 6 then
-      Result := Week[D div 7] + ' Ì‡Á‡‰' // ago
+      Result := Week[D div 7] + ' –Ω–∞–∑–∞–¥' // ago
     else
     if D > 0 then
-      Result := IntToStr(D) + ' ' + Day[D2D[StrToInt(IntToStr(D)[Length(IntToStr(D))])]] + ' Ì‡Á‡‰' // ago
+      Result := IntToStr(D) + ' ' + Day[D2D[StrToInt(IntToStr(D)[Length(IntToStr(D))])]] + ' –Ω–∞–∑–∞–¥' // ago
   end;
 end;
 *****************************)

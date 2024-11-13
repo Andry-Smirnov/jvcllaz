@@ -10,15 +10,15 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvCheckBox.PAS, released on 2001-02-28.
 
-The Initial Developer of the Original Code is Sébastien Buysse [sbuysse att buypin dott com]
-Portions created by Sébastien Buysse are Copyright (C) 2001 Sébastien Buysse.
+The Initial Developer of the Original Code is SÐ¹bastien Buysse [sbuysse att buypin dott com]
+Portions created by SÐ¹bastien Buysse are Copyright (C) 2001 SÐ¹bastien Buysse.
 All Rights Reserved.
 
 Contributor(s):
 Michael Beck [mbeck att bigfoot dott com].
 Ain Valtin - ReadOnly, Alignment, Layout, RightButton
 Robert Marquardt RightButton renamed to LeftText
-Peter Thörnqvist- added LinkedControls property
+Peter ThÑ†rnqvist- added LinkedControls property
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,
 located at http://jvcl.delphi-jedi.org

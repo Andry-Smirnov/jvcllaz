@@ -11,10 +11,10 @@ the specific language governing rights and limitations under the License.
 The Original Code is: JvProfilerForm.PAS, released on 2002-05-26.
 
 The Initial Developer of the Original Code is Certified Software Corp. [certsoft att quest-net dott com]
-Portions created by Peter Thörnqvist are Copyright (C) 1996 Certified Software Corp.
+Portions created by Peter ThÑ†rnqvist are Copyright (C) 1996 Certified Software Corp.
 All Rights Reserved.
 
-Contributor(s): Peter Thörnqvist [peter3 at sourceforge dot net]
+Contributor(s): Peter ThÑ†rnqvist [peter3 at sourceforge dot net]
 
 You may retrieve the latest version of this file at the Project JEDI's JVCL home page,
 located at http://jvcl.delphi-jedi.org
@@ -132,7 +132,7 @@ uses
 const
   EmptyLine = '0.00';
   DefHeader2 =
-    'Profiler 32 - (C) 1996 Certified Software Corp, portions Copyright (C) 1997 by Peter Thörnqvist; all rights reserved.';
+    'Profiler 32 - (C) 1996 Certified Software Corp, portions Copyright (C) 1997 by Peter ThÑ†rnqvist; all rights reserved.';
 
 {
 type

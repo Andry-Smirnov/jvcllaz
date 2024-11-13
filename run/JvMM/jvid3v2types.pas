@@ -10,8 +10,8 @@ the specific language governing rights and limitations under the License.
 
 The Original Code is: JvID3v2Types.PAS, released on 2001-02-28.
 
-The Initial Developer of the Original Code is Sébastien Buysse [sbuysse att buypin dott com]
-Portions created by Sébastien Buysse are Copyright (C) 2001 Sébastien Buysse.
+The Initial Developer of the Original Code is SÐ¹bastien Buysse [sbuysse att buypin dott com]
+Portions created by SÐ¹bastien Buysse are Copyright (C) 2001 SÐ¹bastien Buysse.
 All Rights Reserved.
 
 Contributor(s):
@@ -571,7 +571,7 @@ const
     {160}(S: 'gre'; L: 'Greek, Modern (1453-)'), // Also 'ell'
     (S: 'grn'; L: 'Guarani'),
     (S: 'guj'; L: 'Gujarati'),
-    (S: 'gwi'; L: 'Gwich´in'),
+    (S: 'gwi'; L: 'GwichÒ‘in'),
     (S: 'hai'; L: 'Haida'),
     (S: 'hau'; L: 'Hausa'),
     (S: 'haw'; L: 'Hawaiian'),
@@ -717,7 +717,7 @@ const
     (S: 'niu'; L: 'Niuean'),
     (S: 'nld'; L: 'Dutch'), // Also 'dut'
     (S: 'nno'; L: 'Nynorsk, Norwegian'),
-    (S: 'nob'; L: 'Bokmål, Norwegian'),
+    (S: 'nob'; L: 'BokmÐµl, Norwegian'),
     {310}(S: 'non'; L: 'Norse, Old'),
     (S: 'nor'; L: 'Norwegian'),
     (S: 'nso'; L: 'Sotho, Northern'),
@@ -727,7 +727,7 @@ const
     (S: 'nyn'; L: 'Nyankole'),
     (S: 'nyo'; L: 'Nyoro'),
     (S: 'nzi'; L: 'Nzima'),
-    (S: 'oci'; L: 'Occitan (post 1500); Provençal'),
+    (S: 'oci'; L: 'Occitan (post 1500); ProvenÐ·al'),
     {320}(S: 'oji'; L: 'Ojibwa'),
     (S: 'ori'; L: 'Oriya'),
     (S: 'orm'; L: 'Oromo'),
@@ -751,7 +751,7 @@ const
     {340}(S: 'pon'; L: 'Pohnpeian'),
     (S: 'por'; L: 'Portuguese'),
     (S: 'pra'; L: 'Prakrit languages'),
-    (S: 'pro'; L: 'Provençal, Old (to 1500)'),
+    (S: 'pro'; L: 'ProvenÐ·al, Old (to 1500)'),
     (S: 'pus'; L: 'Pushto'),
     (S: 'qtz'; L: 'Reserved for local user; qaa'),
     (S: 'que'; L: 'Quechua'),
@@ -860,7 +860,7 @@ const
     (S: 'vai'; L: 'Vai'),
     {450}(S: 'ven'; L: 'Venda'),
     (S: 'vie'; L: 'Vietnamese'),
-    (S: 'vol'; L: 'Volapük'),
+    (S: 'vol'; L: 'VolapÑŒk'),
     (S: 'vot'; L: 'Votic'),
     (S: 'wak'; L: 'Wakashan languages'),
     (S: 'wal'; L: 'Walamo'),
