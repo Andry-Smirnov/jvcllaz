@@ -27,6 +27,7 @@ Known Issues:
 
 unit JvId3v2Types;
 
+{$mode Delphi}
 {$WARN 6058 off : Call to subroutine "$1" marked as inline is not inlined}
 interface
 

@@ -12,6 +12,16 @@
         <OtherUnitFiles Value="..\run\JvMM"/>
         <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvMM"/>
       </SearchPaths>
+      <Parsing>
+        <SyntaxOptions>
+          <UseAnsiStrings Value="False"/>
+        </SyntaxOptions>
+      </Parsing>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx5024="True"/>
+        </CompilerMessages>
+      </Other>
     </CompilerOptions>
     <Description Value="JVCL Multimedia and image components (runtime package): bmp animator, id3v1 and id3v2 tags,  full color components and dialogs, gradient, gradient header, special progress bar, animated image"/>
     <License Value="The JVCL is released in accordance with the MPL 1.1 license. To get your own copy or read it, go to http://www.mozilla.org/MPL/MPL-1.1.html. "/>
