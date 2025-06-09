@@ -12,11 +12,6 @@
         <OtherUnitFiles Value="..\run\JvCore"/>
         <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvCore"/>
       </SearchPaths>
-      <Parsing>
-        <SyntaxOptions>
-          <UseAnsiStrings Value="False"/>
-        </SyntaxOptions>
-      </Parsing>
     </CompilerOptions>
     <Description Value="JVCL Core Components (runtime package). Must be compiled before any of the other JvXXX packages can be installed.
 "/>

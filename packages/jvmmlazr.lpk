@@ -12,11 +12,6 @@
         <OtherUnitFiles Value="..\run\JvMM"/>
         <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\run\JvMM"/>
       </SearchPaths>
-      <Parsing>
-        <SyntaxOptions>
-          <UseAnsiStrings Value="False"/>
-        </SyntaxOptions>
-      </Parsing>
       <Other>
         <CompilerMessages>
           <IgnoredMessages idx5024="True"/>

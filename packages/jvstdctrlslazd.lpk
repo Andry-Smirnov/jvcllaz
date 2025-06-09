@@ -12,11 +12,6 @@
         <OtherUnitFiles Value="..\design\JvStdCtrls"/>
         <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)\design\JvStdCtrls"/>
       </SearchPaths>
-      <Parsing>
-        <SyntaxOptions>
-          <UseAnsiStrings Value="False"/>
-        </SyntaxOptions>
-      </Parsing>
     </CompilerOptions>
     <Description Value="Enhanced standard controls of the JVCL library (https://sourceforge.net/projects/jvcl/) (designtime code)
 CalcEdit, button, checkbox, panel, linked controls"/>
